@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background with subtle corner radius -->
+  <rect width="512" height="512" rx="112" fill="#09090b" />
+  
+  <!-- Outer subtle tech accent glow/ring -->
+  <rect x="24" y="24" width="464" height="464" rx="88" stroke="#27272a" stroke-width="8" stroke-dasharray="16 12" opacity="0.6" />
+  
+  <!-- Geometric Tech Monogram 'H' -->
+  <!-- Left Pillar -->
+  <path d="M144 128V384H196V128H144Z" fill="#ffffff" />
+  
+  <!-- Right Pillar -->
+  <path d="M316 128V384H368V128H316Z" fill="#ffffff" />
+  
+  <!-- Central Futuristic Geometric Crossbar & Core -->
+  <path d="M196 228H316V284H196V228Z" fill="#ffffff" />
+  
+  <!-- Dynamic Tech Accent Core (Cyber/Electric Blue Chevron) -->
+  <polygon points="256,204 290,256 256,308 222,256" fill="#2563eb" />
+  <circle cx="256" cy="256" r="8" fill="#ffffff" />
+
+  <!-- Corner Tech Accents -->
+  <circle cx="170" cy="128" r="6" fill="#60a5fa" />
+  <circle cx="342" cy="384" r="6" fill="#60a5fa" />
+</svg>

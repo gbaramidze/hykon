@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="120" fill="#09090b" />
+  <rect x="24" y="24" width="464" height="464" rx="96" stroke="#27272a" stroke-width="8" opacity="0.8" />
+  <!-- Left Pillar -->
+  <path d="M144 128V384H200V128H144Z" fill="#ffffff" />
+  <!-- Right Pillar -->
+  <path d="M312 128V384H368V128H312Z" fill="#ffffff" />
+  <!-- Crossbar -->
+  <path d="M200 230H312V282H200V230Z" fill="#ffffff" />
+  <!-- Electric Blue Center Diamond -->
+  <polygon points="256,208 288,256 256,304 224,256" fill="#2563eb" />
+  <circle cx="256" cy="256" r="7" fill="#ffffff" />
+</svg>
