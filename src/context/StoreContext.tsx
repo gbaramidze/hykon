@@ -85,40 +85,19 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [currency, setCurrencyState] = useState<Currency>('GEL');
 
-  // Load from localStorage on client mount
+  // Load from localStorage on client mount (safe for iOS Safari / WebKit)
   useEffect(() => {
     setIsMounted(true);
+    if (typeof window === 'undefined') return;
+
     try {
-      const DATA_VERSION = 'v15_clean_latin_seo_slugs_2026';
-      const savedVersion = localStorage.getItem('hykon_data_version');
+      // 1. Clean up legacy oversized keys that exceeded iOS Safari 5MB quota
+      localStorage.removeItem('hykon_products');
+      localStorage.removeItem('hykon_categories');
+      localStorage.removeItem('hykon_brands');
+      localStorage.removeItem('hykon_blog');
 
-      if (savedVersion !== DATA_VERSION) {
-        // New dataset version: populate with complete clean dataset
-        setProducts(INITIAL_PRODUCTS);
-        setCategories(INITIAL_CATEGORIES);
-        setBrands(INITIAL_BRANDS);
-        setBlogPosts(INITIAL_BLOG_POSTS);
-        setOrders(INITIAL_ORDERS);
-        localStorage.setItem('hykon_data_version', DATA_VERSION);
-        localStorage.setItem('hykon_products', JSON.stringify(INITIAL_PRODUCTS));
-        localStorage.setItem('hykon_categories', JSON.stringify(INITIAL_CATEGORIES));
-        localStorage.setItem('hykon_brands', JSON.stringify(INITIAL_BRANDS));
-        localStorage.setItem('hykon_blog', JSON.stringify(INITIAL_BLOG_POSTS));
-        return;
-      }
-
-      const savedProducts = localStorage.getItem('hykon_products');
-      if (savedProducts) setProducts(JSON.parse(savedProducts));
-
-      const savedCategories = localStorage.getItem('hykon_categories');
-      if (savedCategories) setCategories(JSON.parse(savedCategories));
-
-      const savedBrands = localStorage.getItem('hykon_brands');
-      if (savedBrands) setBrands(JSON.parse(savedBrands));
-
-      const savedBlog = localStorage.getItem('hykon_blog');
-      if (savedBlog) setBlogPosts(JSON.parse(savedBlog));
-
+      // 2. Safely load user cart, wishlist, compare, orders, currency
       const savedOrders = localStorage.getItem('hykon_orders');
       if (savedOrders) setOrders(JSON.parse(savedOrders));
 
@@ -134,54 +113,44 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const savedCurrency = localStorage.getItem('hykon_currency');
       if (savedCurrency === 'USD' || savedCurrency === 'GEL') setCurrencyState(savedCurrency);
     } catch (e) {
-      console.error('Failed to load store state from localStorage:', e);
+      console.warn('LocalStorage access restricted or unavailable:', e);
     }
   }, []);
 
-  // Save to localStorage when state changes
+  // Save user-specific state to localStorage safely
   useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_products', JSON.stringify(products));
-  }, [products, isMounted]);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_categories', JSON.stringify(categories));
-  }, [categories, isMounted]);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_brands', JSON.stringify(brands));
-  }, [brands, isMounted]);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_blog', JSON.stringify(blogPosts));
-  }, [blogPosts, isMounted]);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_orders', JSON.stringify(orders));
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('hykon_orders', JSON.stringify(orders));
+    } catch {}
   }, [orders, isMounted]);
 
   useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_cart', JSON.stringify(cart));
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('hykon_cart', JSON.stringify(cart));
+    } catch {}
   }, [cart, isMounted]);
 
   useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_compare', JSON.stringify(compareList));
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('hykon_compare', JSON.stringify(compareList));
+    } catch {}
   }, [compareList, isMounted]);
 
   useEffect(() => {
-    if (!isMounted) return;
-    localStorage.setItem('hykon_wishlist', JSON.stringify(wishlist));
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('hykon_wishlist', JSON.stringify(wishlist));
+    } catch {}
   }, [wishlist, isMounted]);
 
   const setCurrency = (c: Currency) => {
     setCurrencyState(c);
-    localStorage.setItem('hykon_currency', c);
+    try {
+      localStorage.setItem('hykon_currency', c);
+    } catch {}
   };
 
   const formatPrice = (amountInGEL: number): string => {
