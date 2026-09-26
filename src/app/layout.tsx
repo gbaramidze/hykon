@@ -28,18 +28,34 @@ export const metadata: Metadata = {
     "WD Purple",
     "CCTV cameras Batumi",
     "Security systems Georgia",
-    "Hykon.ge"
+    "Hykon.ge",
   ],
   metadataBase: new URL("https://hykon.ge"),
   alternates: {
     canonical: "/",
+    languages: {
+      "ka-GE": "https://hykon.ge",
+      "en-US": "https://hykon.ge/en",
+      "ru-RU": "https://hykon.ge/ru",
+      "x-default": "https://hykon.ge",
+    },
   },
+  authors: [{ name: "HYKON.GE", url: "https://hykon.ge" }],
+  creator: "HYKON.GE",
+  publisher: "HYKON.GE",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  category: "technology",
   openGraph: {
     title: "HYKON.GE — უსაფრთხოების სისტემები და ვიდეომეთვალყურეობა",
     description: "ოფიციალური გარანტია, სწრაფი მიწოდება მთელ საქართველოში და პროფესიონალური მონტაჟი.",
     url: "https://hykon.ge",
     siteName: "HYKON.GE",
     locale: "ka_GE",
+    alternateLocale: ["en_US", "ru_RU"],
     type: "website",
   },
   twitter: {
@@ -50,6 +66,19 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "geo.region": "GE-AJ",
+    "geo.placename": "Batumi",
+    "geo.position": "41.6461;41.6405",
+    "ICBM": "41.6461, 41.6405",
   },
 };
 
@@ -66,20 +95,47 @@ export default async function RootLayout({
 
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "Store", "LocalBusiness"],
     name: "I/E Hykon",
-    alternateName: "ი.მ. Hykon",
+    alternateName: ["ი.მ. Hykon", "HYKON.GE"],
     url: "https://hykon.ge",
     logo: "https://hykon.ge/images/logo.png",
+    image: "https://hykon.ge/images/logo.png",
     telephone: "+995591432525",
     email: "support@hykon.ge",
     taxID: "61001070627",
+    priceRange: "₾₾",
+    currenciesAccepted: "GEL",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer, RS.GE Invoice",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Batumi",
       addressLocality: "Batumi",
+      addressRegion: "Adjara",
+      postalCode: "6000",
       addressCountry: "GE",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 41.6461,
+      longitude: 41.6405,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "10:00",
+        closes: "21:00",
+      },
+    ],
     sameAs: [
       "https://facebook.com/hykon.ge",
       "https://instagram.com/hykon.ge",
