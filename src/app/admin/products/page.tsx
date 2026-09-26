@@ -321,7 +321,7 @@ export default function AdminProductsPage() {
                       <div className="flex items-center gap-3">
                         <div className="relative w-12 h-12 bg-zinc-50 border border-zinc-100 rounded-lg overflow-hidden flex-shrink-0 p-1">
                           <Image
-                            src={prod.thumbnail || prod.images[0]}
+                            src={prod.thumbnail || prod.images?.[0] || '/images/placeholder.svg'}
                             alt=""
                             fill
                             className="object-contain"

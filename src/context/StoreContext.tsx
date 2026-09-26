@@ -89,6 +89,24 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     setIsMounted(true);
     try {
+      const DATA_VERSION = 'v15_clean_latin_seo_slugs_2026';
+      const savedVersion = localStorage.getItem('hykon_data_version');
+
+      if (savedVersion !== DATA_VERSION) {
+        // New dataset version: populate with complete clean dataset
+        setProducts(INITIAL_PRODUCTS);
+        setCategories(INITIAL_CATEGORIES);
+        setBrands(INITIAL_BRANDS);
+        setBlogPosts(INITIAL_BLOG_POSTS);
+        setOrders(INITIAL_ORDERS);
+        localStorage.setItem('hykon_data_version', DATA_VERSION);
+        localStorage.setItem('hykon_products', JSON.stringify(INITIAL_PRODUCTS));
+        localStorage.setItem('hykon_categories', JSON.stringify(INITIAL_CATEGORIES));
+        localStorage.setItem('hykon_brands', JSON.stringify(INITIAL_BRANDS));
+        localStorage.setItem('hykon_blog', JSON.stringify(INITIAL_BLOG_POSTS));
+        return;
+      }
+
       const savedProducts = localStorage.getItem('hykon_products');
       if (savedProducts) setProducts(JSON.parse(savedProducts));
 
@@ -293,6 +311,18 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     };
     setOrders(prev => [newOrder, ...prev]);
     clearCart();
+
+    // Send Telegram Notification asynchronously
+    try {
+      fetch('/api/telegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newOrder),
+      }).catch(err => console.error('Telegram notification error:', err));
+    } catch (err) {
+      console.error('Failed to trigger telegram notification:', err);
+    }
+
     return newOrder;
   };
 

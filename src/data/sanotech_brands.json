@@ -1,0 +1,82 @@
+[
+  {
+    "id": "brand-1",
+    "name": "Hikvision",
+    "slug": "hikvision",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official Hikvision high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 810
+  },
+  {
+    "id": "brand-2",
+    "name": "HiWatch",
+    "slug": "hiwatch",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official HiWatch high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 89
+  },
+  {
+    "id": "brand-3",
+    "name": "Ruijie",
+    "slug": "ruijie",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official Ruijie high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 1
+  },
+  {
+    "id": "brand-4",
+    "name": "AJAX",
+    "slug": "ajax",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official AJAX high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 79
+  },
+  {
+    "id": "brand-5",
+    "name": "Seagate",
+    "slug": "seagate",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official Seagate high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 4
+  },
+  {
+    "id": "brand-6",
+    "name": "EZVIZ",
+    "slug": "ezviz",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official EZVIZ high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 44
+  },
+  {
+    "id": "brand-7",
+    "name": "HiLook",
+    "slug": "hilook",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official HiLook high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 15
+  },
+  {
+    "id": "brand-8",
+    "name": "Western Digital",
+    "slug": "western-digital",
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Official Western Digital high quality security equipment with guarantee.",
+    "country": "International",
+    "featured": true,
+    "productCount": 2
+  }
+]

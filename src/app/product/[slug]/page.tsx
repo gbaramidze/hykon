@@ -13,17 +13,18 @@ import {
   RotateCcw,
   Check,
   Star,
-  MessageSquare,
   Zap,
   Phone,
   X,
   CreditCard,
+  Building2,
 } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ProductImageZoom } from '@/components/ProductImageZoom';
 import { ProductCard } from '@/components/ProductCard';
 import { useStore } from '@/context/StoreContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { Review } from '@/types';
 
 export default function ProductDetailPage() {
@@ -41,8 +42,27 @@ export default function ProductDetailPage() {
     isInWishlist,
     createOrder,
   } = useStore();
+  const {
+    language,
+    t,
+    translateProductTitle,
+    translateCategoryName,
+    translateDescription,
+    translateSpecGroup,
+    translateSpecName,
+    translateSpecValue,
+    getLocalizedHref,
+  } = useLanguage();
 
-  const product = products.find(p => p.slug === slug);
+  const decodedSlug = decodeURIComponent(slug || '');
+  const product = products.find(
+    p =>
+      p.slug === slug ||
+      p.slug === decodedSlug ||
+      p.id === slug ||
+      (p as any).oldSlug === slug ||
+      p.sku?.toLowerCase() === slug.toLowerCase()
+  );
 
   // States
   const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
@@ -59,21 +79,21 @@ export default function ProductDetailPage() {
     {
       id: 'rev-1',
       productId: product?.id || '',
-      userName: 'Александр М.',
+      userName: 'დავით მ.',
       rating: 5,
-      date: '14 Сентября 2026',
-      comment: 'Абсолютно топовое устройство! Сборка монолитная, экран передает цвета идеально. Доставили в Тбилиси за 3 часа.',
-      pros: 'Производительность, экран, автономность',
-      cons: 'Не обнаружил',
+      date: '24 სექტემბერი 2026',
+      comment: 'ძალიან კარგი ხარისხის კამერაა. ღამით ხედვა და AI დეტექცია მუშაობს იდეალურად. მიწოდება მოხდა იმავე დღეს.',
+      pros: 'ღამის ფერადი ხედვა, მკაფიო გამოსახულება, მარტივი მონტაჟი',
+      cons: 'არ აქვს',
       verifiedPurchase: true,
     },
     {
       id: 'rev-2',
       productId: product?.id || '',
-      userName: 'Гиорги К.',
+      userName: 'გიორგი კ.',
       rating: 5,
-      date: '02 Сентября 2026',
-      comment: 'Покупал в рассрочку от TBC. Все оформили моментально онлайн. Рекомендую магазин Hykon!',
+      date: '12 სექტემბერი 2026',
+      comment: 'შევუკვეთეთ ინვოისით კომპანიისთვის. საბუთები და ინვოისი მომენტალურად გადმოგვიგზავნეს RS.GE-ზე. რეკომენდაციას ვუწევ Hykon-ს!',
       verifiedPurchase: true,
     },
   ]);
@@ -88,10 +108,10 @@ export default function ProductDetailPage() {
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
         <main className="flex-1 max-w-7xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-zinc-900 mb-2">Товар не найден</h1>
-          <p className="text-xs text-zinc-500 mb-6">Возможно, он был перемещен или удален из каталога.</p>
-          <Link href="/catalog" className="bg-black text-white px-6 py-2.5 rounded-xl text-xs font-semibold">
-            Вернуться в каталог
+          <h1 className="text-2xl font-bold text-zinc-900 mb-2">{t.notFound}</h1>
+          <p className="text-xs text-zinc-500 mb-6">{t.notFoundDesc}</p>
+          <Link href={getLocalizedHref('/catalog')} className="bg-black text-white px-6 py-2.5 rounded-xl text-xs font-semibold">
+            {t.catalogMenu}
           </Link>
         </main>
         <Footer />
@@ -99,6 +119,7 @@ export default function ProductDetailPage() {
     );
   }
 
+  const displayTitle = translateProductTitle(product.title);
   const inCompare = isInCompare(product.id);
   const inWish = isInWishlist(product.id);
 
@@ -123,15 +144,15 @@ export default function ProductDetailPage() {
 
     createOrder({
       customer: {
-        fullName: oneClickName || 'Быстрый заказ',
+        fullName: oneClickName || 'სწრაფი შეკვეთა (1-Click)',
         phone: oneClickPhone,
         email: 'quick-buy@hykon.ge',
-        city: 'Тбилиси',
-        address: 'Уточняется менеджером по телефону',
-        notes: 'Быстрый заказ в 1 клик',
+        city: 'თბილისი',
+        address: 'მისამართი ზუსტდება მენეჯერთან სატელეფონო საუბრისას',
+        notes: 'სწრაფი შეკვეთა საიტიდან (1-Click Buy)',
       },
       deliveryMethod: 'courier',
-      paymentMethod: 'cash',
+      paymentMethod: 'bank_transfer',
       items: [
         {
           productId: product.id,
@@ -168,7 +189,7 @@ export default function ProductDetailPage() {
       productId: product.id,
       userName: newReviewAuthor,
       rating: newReviewRating,
-      date: 'Сегодня',
+      date: 'დღეს',
       comment: newReviewComment,
       pros: newReviewPros,
       verifiedPurchase: true,
@@ -185,41 +206,108 @@ export default function ProductDetailPage() {
     .filter(p => p.id !== product.id && p.categoryId === product.categoryId)
     .slice(0, 4);
 
+  // SEO: Schema.org Product markup
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.title,
+    image: product.images,
+    description: product.shortDescription || product.title,
+    sku: product.sku,
+    mpn: product.sku,
+    brand: {
+      '@type': 'Brand',
+      name: product.brand,
+    },
+    offers: {
+      '@type': 'Offer',
+      url: `https://hykon.ge/product/${product.slug}`,
+      priceCurrency: 'GEL',
+      price: currentPrice,
+      priceValidUntil: '2027-12-31',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+      seller: {
+        '@type': 'Organization',
+        name: 'HYKON.GE',
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: product.rating || '4.8',
+      reviewCount: reviews.length || '1',
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'მთავარი',
+        item: 'https://hykon.ge',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'კატალოგი',
+        item: 'https://hykon.ge/catalog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: product.title,
+        item: `https://hykon.ge/product/${product.slug}`,
+      },
+    ],
+  };
+
   return (
-    <div className="min-h-screen flex flex-col bg-white w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Header />
 
-      <main className="flex-1 max-w-7xl mx-auto px-3.5 sm:px-4 py-4 sm:py-6 w-full max-w-full min-w-0 overflow-hidden">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
         {/* Breadcrumbs */}
-        <nav className="flex items-center space-x-1.5 text-[11px] sm:text-xs text-zinc-500 mb-4 sm:mb-6 overflow-x-auto whitespace-nowrap scrollbar-none max-w-full pb-1">
-          <Link href="/" className="hover:text-black flex-shrink-0">
-            Главная
+        <nav className="flex items-center space-x-1.5 text-xs text-zinc-500 mb-6 overflow-x-auto whitespace-nowrap scrollbar-none pb-1">
+          <Link href={getLocalizedHref('/')} className="hover:text-black shrink-0">
+            {t.allProducts === 'ყველა პროდუქტი' ? 'მთავარი' : language === 'en' ? 'Home' : 'Главная'}
           </Link>
-          <ChevronRight className="w-3 h-3 text-zinc-400 flex-shrink-0" />
-          <Link href="/catalog" className="hover:text-black flex-shrink-0">
-            Каталог
+          <ChevronRight className="w-3 h-3 text-zinc-400 shrink-0" />
+          <Link href={getLocalizedHref('/catalog')} className="hover:text-black shrink-0">
+            {t.catalog}
           </Link>
           {product.categoryPath?.map(cp => (
             <React.Fragment key={cp.id}>
-              <ChevronRight className="w-3 h-3 text-zinc-400 flex-shrink-0" />
-              <Link href={`/catalog/${cp.slug}`} className="hover:text-black flex-shrink-0">
-                {cp.name}
+              <ChevronRight className="w-3 h-3 text-zinc-400 shrink-0" />
+              <Link href={getLocalizedHref(`/catalog/${cp.slug}`)} className="hover:text-black shrink-0">
+                {translateCategoryName(cp.name)}
               </Link>
             </React.Fragment>
           ))}
-          <ChevronRight className="w-3 h-3 text-zinc-400 flex-shrink-0" />
-          <span className="text-black font-semibold truncate max-w-[140px] sm:max-w-xs">{product.title}</span>
+          <ChevronRight className="w-3 h-3 text-zinc-400 shrink-0" />
+          <span className="text-black font-semibold truncate max-w-[160px] sm:max-w-xs">{displayTitle}</span>
         </nav>
 
         {/* Product Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 pb-12 border-b border-zinc-200 w-full min-w-0">
-          {/* Left: Gallery with Zoom (7 cols) */}
-          <div className="lg:col-span-7 min-w-0 w-full">
-            <ProductImageZoom images={product.images} title={product.title} />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-zinc-200 w-full min-w-0 items-start">
+          {/* Left: Gallery with Zoom (5 cols) */}
+          <div className="lg:col-span-5 min-w-0 w-full">
+            <ProductImageZoom images={product.images} title={displayTitle} />
           </div>
 
-          {/* Right: Info & Buy Box (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+          {/* Right: Info & Buy Box (7 cols) */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
             <div>
               {/* Brand & SKU & Rating */}
               <div className="flex items-center justify-between text-xs text-zinc-500 mb-2">
@@ -241,11 +329,11 @@ export default function ProductDetailPage() {
 
               {/* Title */}
               <h1 className="text-2xl md:text-3xl font-bold text-zinc-950 leading-tight mb-4">
-                {product.title}
+                {displayTitle}
               </h1>
 
               {/* Price Block */}
-              <div className="bg-zinc-50 rounded-2xl p-5 border border-zinc-200 mb-6 space-y-2">
+              <div className="bg-zinc-50 rounded-2xl p-4 sm:p-5 border border-zinc-200 mb-6 space-y-2">
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl font-extrabold text-zinc-950 font-mono">
                     {formatPrice(currentPrice)}
@@ -257,16 +345,9 @@ export default function ProductDetailPage() {
                   )}
                   {product.oldPrice && (
                     <span className="bg-rose-600 text-white text-xs font-bold px-2 py-0.5 rounded font-mono">
-                      Экономия {formatPrice(product.oldPrice - currentPrice)}
+                      {t.saving} {formatPrice(product.oldPrice - currentPrice)}
                     </span>
                   )}
-                </div>
-
-                <div className="text-xs text-zinc-600 flex items-center gap-1.5 pt-1">
-                  <CreditCard className="w-3.5 h-3.5 text-zinc-500" />
-                  <span>
-                    Беспроцентная рассрочка от <b>{formatPrice(Math.round(currentPrice / 12))} / мес</b>
-                  </span>
                 </div>
               </div>
 
@@ -275,7 +356,7 @@ export default function ProductDetailPage() {
                 <div className="space-y-4 mb-6">
                   <div>
                     <label className="text-xs font-bold text-zinc-900 uppercase tracking-wider block mb-2">
-                      Конфигурация / Вариант:
+                      {t.specifications}:
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {product.variants.map(variant => {
@@ -302,30 +383,30 @@ export default function ProductDetailPage() {
                 </div>
               )}
 
-              {/* Stock Status & Fast Guarantees */}
+              {/* Stock Status & Guarantees */}
               <div className="space-y-2.5 bg-white border border-zinc-200 rounded-xl p-4 mb-6 text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-zinc-500">Наличие на складе:</span>
+                  <span className="text-zinc-500">{t.inStock}:</span>
                   {product.inStock ? (
                     <span className="font-semibold text-emerald-600 flex items-center gap-1">
                       <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      В наличии ({product.stockCount} шт.)
+                      {t.inStock} ({product.stockCount} {t.qty})
                     </span>
                   ) : (
-                    <span className="text-zinc-400 font-medium">Под заказ</span>
+                    <span className="text-zinc-400 font-medium">{t.onOrder}</span>
                   )}
                 </div>
                 <div className="flex items-center gap-2 text-zinc-700">
-                  <Truck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>{product.deliveryTime}</span>
+                  <Truck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>{t.freeDeliveryNotice}</span>
                 </div>
                 <div className="flex items-center gap-2 text-zinc-700">
-                  <ShieldCheck className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                  <span>{product.warranty}</span>
+                  <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
+                  <span>{t.officialWarrantyNotice} (до 36 თვემდე)</span>
                 </div>
                 <div className="flex items-center gap-2 text-zinc-700">
-                  <RotateCcw className="w-4 h-4 text-amber-600 flex-shrink-0" />
-                  <span>14 дней на обмен или возврат без вопросов</span>
+                  <RotateCcw className="w-4 h-4 text-amber-600 shrink-0" />
+                  <span>{t.easyReturnNotice}</span>
                 </div>
               </div>
 
@@ -364,12 +445,12 @@ export default function ProductDetailPage() {
                     {addedAnim ? (
                       <>
                         <Check className="w-4 h-4 shrink-0" />
-                        <span className="truncate">Добавлено</span>
+                        <span className="truncate">{t.added}</span>
                       </>
                     ) : (
                       <>
                         <ShoppingBag className="w-4 h-4 shrink-0" />
-                        <span className="truncate">{product.inStock ? 'В корзину' : 'Нет в наличии'}</span>
+                        <span className="truncate">{product.inStock ? t.addToCart : t.outOfStock}</span>
                       </>
                     )}
                   </button>
@@ -380,7 +461,7 @@ export default function ProductDetailPage() {
                     className={`p-3 sm:p-3.5 rounded-xl border transition-all shrink-0 ${
                       inWish ? 'bg-rose-50 border-rose-200 text-rose-600' : 'border-zinc-200 text-zinc-600 hover:text-rose-600'
                     }`}
-                    title="В избранное"
+                    title={t.wishlist}
                   >
                     <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${inWish ? 'fill-rose-600' : ''}`} />
                   </button>
@@ -391,7 +472,7 @@ export default function ProductDetailPage() {
                     className={`p-3 sm:p-3.5 rounded-xl border transition-all shrink-0 ${
                       inCompare ? 'bg-zinc-900 border-zinc-900 text-white' : 'border-zinc-200 text-zinc-600 hover:border-black'
                     }`}
-                    title="Сравнить характеристики"
+                    title={t.compare}
                   >
                     <SlidersHorizontal className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
@@ -404,7 +485,7 @@ export default function ProductDetailPage() {
                     className="w-full py-2.5 sm:py-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
                   >
                     <Zap className="w-3.5 h-3.5 text-amber-600" />
-                    Купить в 1 клик (без регистрации)
+                    {t.buyIn1Click}
                   </button>
                 )}
               </div>
@@ -419,41 +500,41 @@ export default function ProductDetailPage() {
               onClick={() => setActiveTab('specs')}
               className={`pb-2 sm:pb-3 border-b-2 transition-colors whitespace-nowrap ${
                 activeTab === 'specs'
-                  ? 'border-black text-black'
+                  ? 'border-black text-black font-bold'
                   : 'border-transparent text-zinc-400 hover:text-zinc-700'
               }`}
             >
-              Характеристики
+              {t.specifications}
             </button>
             <button
               onClick={() => setActiveTab('desc')}
               className={`pb-2 sm:pb-3 border-b-2 transition-colors whitespace-nowrap ${
                 activeTab === 'desc'
-                  ? 'border-black text-black'
+                  ? 'border-black text-black font-bold'
                   : 'border-transparent text-zinc-400 hover:text-zinc-700'
               }`}
             >
-              Описание товара
+              {t.description}
             </button>
             <button
               onClick={() => setActiveTab('delivery')}
               className={`pb-2 sm:pb-3 border-b-2 transition-colors whitespace-nowrap ${
                 activeTab === 'delivery'
-                  ? 'border-black text-black'
+                  ? 'border-black text-black font-bold'
                   : 'border-transparent text-zinc-400 hover:text-zinc-700'
               }`}
             >
-              Доставка и гарантия
+              {t.deliveryTab}
             </button>
             <button
               onClick={() => setActiveTab('reviews')}
               className={`pb-2 sm:pb-3 border-b-2 transition-colors whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === 'reviews'
-                  ? 'border-black text-black'
+                  ? 'border-black text-black font-bold'
                   : 'border-transparent text-zinc-400 hover:text-zinc-700'
               }`}
             >
-              <span>Отзывы</span>
+              <span>{t.reviews}</span>
               <span className="bg-zinc-100 text-zinc-700 text-[10px] px-1.5 py-0.5 rounded-full font-mono">
                 {reviews.length}
               </span>
@@ -467,7 +548,7 @@ export default function ProductDetailPage() {
                 product.specGroups.map((group, idx) => (
                   <div key={idx} className="bg-white rounded-xl border border-zinc-200 overflow-hidden">
                     <div className="bg-zinc-50 px-5 py-3 border-b border-zinc-200 text-xs font-bold uppercase tracking-wider text-zinc-900">
-                      {group.group}
+                      {translateSpecGroup(group.group)}
                     </div>
                     <div className="divide-y divide-zinc-100">
                       {group.items.map((item, itemIdx) => (
@@ -475,9 +556,11 @@ export default function ProductDetailPage() {
                           key={itemIdx}
                           className="grid grid-cols-1 sm:grid-cols-3 px-5 py-3 text-xs gap-2"
                         >
-                          <span className="text-zinc-500 font-medium">{item.name}</span>
+                          <span className="text-zinc-500 font-medium">
+                            {translateSpecName(item.name)}
+                          </span>
                           <span className="sm:col-span-2 text-zinc-900 font-semibold">
-                            {item.value}
+                            {translateSpecValue(item.value)}
                           </span>
                         </div>
                       ))}
@@ -485,18 +568,23 @@ export default function ProductDetailPage() {
                   </div>
                 ))
               ) : (
-                <div className="text-xs text-zinc-500">Спецификации для данного товара уточняются.</div>
+                <div className="text-xs text-zinc-500">{t.specifications}</div>
               )}
             </div>
           )}
 
           {/* TAB 2: DESCRIPTION */}
           {activeTab === 'desc' && (
-            <div className="max-w-3xl space-y-4 animate-fade-in text-zinc-800 text-sm leading-relaxed whitespace-pre-line">
+            <div className="max-w-3xl space-y-4 animate-fade-in text-zinc-800 text-sm leading-relaxed">
               <div className="font-semibold text-lg text-zinc-900 mb-2">
-                Обзор устройства {product.title}
+                {displayTitle}
               </div>
-              <p>{product.fullDescription || product.shortDescription}</p>
+              <div
+                className="prose-hykon bg-zinc-50/50 p-6 rounded-2xl border border-zinc-200"
+                dangerouslySetInnerHTML={{
+                  __html: translateDescription(product.fullDescription || product.shortDescription || `<p>${displayTitle}</p>`)
+                }}
+              />
             </div>
           )}
 
@@ -504,25 +592,22 @@ export default function ProductDetailPage() {
           {activeTab === 'delivery' && (
             <div className="max-w-3xl space-y-6 animate-fade-in text-xs text-zinc-700 leading-relaxed">
               <div className="bg-zinc-50 p-6 rounded-xl border border-zinc-200 space-y-3">
-                <h4 className="font-bold text-sm text-zinc-900">Условия доставки</h4>
+                <h4 className="font-bold text-sm text-zinc-900">{t.deliveryAndPayment}</h4>
                 <p>
-                  • <b>Курьер по Тбилиси:</b> Доставка в день заказа при оформлении до 16:00. При сумме заказа от 150 ₾ — <b>бесплатно</b> (до 150 ₾ — 7 ₾).
+                  • <b>{t.courierDelivery}:</b> 1-2 დღეში საქართველოს ნებისმიერ წერტილში. 150 ₾-დან — <b>უფასო</b>.
                 </p>
                 <p>
-                  • <b>Регионы Грузии (Батуми, Кутаиси, Рустави и др.):</b> Экспресс-доставка за 1-2 рабочих дня курьерской службой.
+                  • <b>{t.pickupShowroom}:</b> {t.showroomAddress} (ორშ-კვირ 10:00 - 20:00).
                 </p>
                 <p>
-                  • <b>Самовывоз из шоурума:</b> г. Тбилиси, пр. Чавчавадзе 37 (ежедневно с 10:00 до 21:00).
+                  • <b>{t.bankTransfer}:</b> ოფიციალური ინვოისის მიღება და გადახდა საბანკო რეკვიზიტებზე (RS.GE).
                 </p>
               </div>
 
               <div className="bg-zinc-50 p-6 rounded-xl border border-zinc-200 space-y-3">
-                <h4 className="font-bold text-sm text-zinc-900">Гарантийные обязательства</h4>
+                <h4 className="font-bold text-sm text-zinc-900">{t.warrantyAndService}</h4>
                 <p>
-                  Вся техника в магазине Hykon.ge является 100% оригинальной и обеспечивается официальной гарантией производителя до 36 месяцев со дня покупки.
-                </p>
-                <p>
-                  В течение 14 дней с момента получения вы можете вернуть или обменять исправный товар при сохранении товарного вида и упаковки.
+                  {t.footerAbout}
                 </p>
               </div>
             </div>
@@ -530,124 +615,83 @@ export default function ProductDetailPage() {
 
           {/* TAB 4: REVIEWS */}
           {activeTab === 'reviews' && (
-            <div className="max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-8 animate-fade-in">
-              {/* Existing Reviews List (7 cols) */}
-              <div className="md:col-span-7 space-y-4">
+            <div className="max-w-3xl space-y-8 animate-fade-in">
+              {/* Existing reviews list */}
+              <div className="space-y-4">
                 {reviews.map(rev => (
-                  <div key={rev.id} className="p-5 rounded-xl border border-zinc-200 bg-white space-y-2">
+                  <div key={rev.id} className="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-zinc-900">{rev.userName}</span>
+                        <span className="font-bold text-xs text-zinc-900">{rev.userName}</span>
                         {rev.verifiedPurchase && (
-                          <span className="text-[10px] bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded font-medium">
-                            Проверенная покупка
+                          <span className="text-[10px] text-emerald-700 bg-emerald-100 font-semibold px-1.5 py-0.5 rounded">
+                            {t.inStock}
                           </span>
                         )}
                       </div>
-                      <span className="text-[10px] text-zinc-400">{rev.date}</span>
+                      <span className="text-zinc-400 text-xs font-mono">{rev.date}</span>
                     </div>
 
                     <div className="flex items-center gap-1 text-amber-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-3.5 h-3.5 ${
-                            i < rev.rating ? 'fill-amber-500' : 'text-zinc-200'
-                          }`}
-                        />
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-500" />
                       ))}
                     </div>
 
-                    <p className="text-xs text-zinc-700 leading-relaxed">{rev.comment}</p>
-
+                    <p className="text-xs text-zinc-700 leading-relaxed pt-1">{rev.comment}</p>
                     {rev.pros && (
-                      <div className="text-xs text-zinc-600 bg-zinc-50 p-2 rounded border border-zinc-100 mt-2">
-                        <b>Плюсы:</b> {rev.pros}
-                      </div>
+                      <p className="text-[11px] text-zinc-600">
+                        <b>+</b> {rev.pros}
+                      </p>
                     )}
                   </div>
                 ))}
               </div>
 
-              {/* Add Review Form (5 cols) */}
-              <div className="md:col-span-5">
-                <form
-                  onSubmit={handleAddReview}
-                  className="bg-zinc-50 border border-zinc-200 p-6 rounded-2xl space-y-4"
-                >
-                  <h4 className="font-bold text-sm text-zinc-900">Оставить отзыв</h4>
-
+              {/* Add review form */}
+              <form onSubmit={handleAddReview} className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-4">
+                <h4 className="font-bold text-sm text-zinc-900">{t.reviews}</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-[11px] font-semibold text-zinc-600 block mb-1">
-                      Оценка
-                    </label>
-                    <div className="flex items-center gap-2">
-                      {[1, 2, 3, 4, 5].map(star => (
-                        <button
-                          type="button"
-                          key={star}
-                          onClick={() => setNewReviewRating(star)}
-                          className="p-1 text-amber-500 hover:scale-110 transition-transform"
-                        >
-                          <Star
-                            className={`w-5 h-5 ${
-                              star <= newReviewRating ? 'fill-amber-500' : 'text-zinc-300'
-                            }`}
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-[11px] font-semibold text-zinc-600 block mb-1">
-                      Ваше имя
-                    </label>
+                    <label className="text-xs text-zinc-600 block mb-1">{t.yourName}</label>
                     <input
                       type="text"
                       required
-                      placeholder="Имя Фамилия"
                       value={newReviewAuthor}
                       onChange={e => setNewReviewAuthor(e.target.value)}
-                      className="w-full bg-white border border-zinc-200 p-2 rounded-lg text-xs focus:outline-none focus:border-black"
+                      className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-black"
                     />
                   </div>
-
                   <div>
-                    <label className="text-[11px] font-semibold text-zinc-600 block mb-1">
-                      Плюсы / Особенности
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Что вам особенно понравилось?"
-                      value={newReviewPros}
-                      onChange={e => setNewReviewPros(e.target.value)}
-                      className="w-full bg-white border border-zinc-200 p-2 rounded-lg text-xs focus:outline-none focus:border-black"
-                    />
+                    <label className="text-xs text-zinc-600 block mb-1">{t.sortRating}</label>
+                    <select
+                      value={newReviewRating}
+                      onChange={e => setNewReviewRating(Number(e.target.value))}
+                      className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-black"
+                    >
+                      <option value={5}>⭐⭐⭐⭐⭐ (5/5)</option>
+                      <option value={4}>⭐⭐⭐⭐ (4/5)</option>
+                      <option value={3}>⭐⭐⭐ (3/5)</option>
+                    </select>
                   </div>
-
-                  <div>
-                    <label className="text-[11px] font-semibold text-zinc-600 block mb-1">
-                      Комментарий
-                    </label>
-                    <textarea
-                      required
-                      rows={3}
-                      placeholder="Поделитесь вашими впечатлениями от использования..."
-                      value={newReviewComment}
-                      onChange={e => setNewReviewComment(e.target.value)}
-                      className="w-full bg-white border border-zinc-200 p-2 rounded-lg text-xs focus:outline-none focus:border-black"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-2.5 bg-black hover:bg-zinc-800 text-white rounded-xl text-xs font-semibold transition-colors"
-                  >
-                    Отправить отзыв
-                  </button>
-                </form>
-              </div>
+                </div>
+                <div>
+                  <label className="text-xs text-zinc-600 block mb-1">{t.description}</label>
+                  <textarea
+                    rows={3}
+                    required
+                    value={newReviewComment}
+                    onChange={e => setNewReviewComment(e.target.value)}
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-black"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-black text-white px-5 py-2.5 rounded-xl text-xs font-semibold hover:bg-zinc-800 transition-colors"
+                >
+                  {t.submitOrder}
+                </button>
+              </form>
             </div>
           )}
         </div>
@@ -655,96 +699,86 @@ export default function ProductDetailPage() {
         {/* RELATED PRODUCTS */}
         {relatedProducts.length > 0 && (
           <div className="py-12">
-            <h3 className="text-xl font-bold text-zinc-900 mb-6">Похожие товары</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {relatedProducts.map(p => (
-                <ProductCard key={p.id} product={p} />
+            <h3 className="text-xl font-bold text-zinc-950 mb-6">{t.relatedProducts}</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {relatedProducts.map(rel => (
+                <ProductCard key={rel.id} product={rel} />
               ))}
             </div>
           </div>
         )}
       </main>
 
-      <Footer />
-
-      {/* Instant 1-Click Buy Modal */}
+      {/* 1-CLICK BUY MODAL */}
       {is1ClickModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 border border-zinc-200 shadow-2xl relative">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative animate-scale-up">
             <button
               onClick={() => setIs1ClickModalOpen(false)}
-              className="absolute top-4 right-4 p-1 rounded-md text-zinc-400 hover:text-black"
+              className="absolute top-5 right-5 p-1.5 rounded-full text-zinc-400 hover:text-black hover:bg-zinc-100"
             >
               <X className="w-5 h-5" />
             </button>
 
             {oneClickSuccess ? (
               <div className="text-center py-6 space-y-3">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
                   <Check className="w-6 h-6" />
                 </div>
-                <h4 className="text-lg font-bold text-zinc-900">Заказ успешно оформлен!</h4>
-                <p className="text-xs text-zinc-600">
-                  Наш оператор свяжется с вами в течение 5 минут для подтверждения адреса доставки.
-                </p>
+                <h3 className="text-lg font-bold text-zinc-900">{t.orderSuccessMsg}</h3>
               </div>
             ) : (
               <form onSubmit={handleOneClickBuy} className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-bold text-zinc-900">Быстрый заказ в 1 клик</h3>
-                  <p className="text-xs text-zinc-500 mt-0.5">
-                    Оставьте номер телефона, и мы сразу зарезервируем товар за вами
-                  </p>
+                  <h3 className="text-lg font-bold text-zinc-950">{t.oneClickTitle}</h3>
+                  <p className="text-xs text-zinc-500 mt-1">{t.oneClickDesc}</p>
                 </div>
 
-                <div className="p-3 bg-zinc-50 rounded-xl border border-zinc-100 flex items-center gap-3">
-                  <div className="text-xs font-semibold text-zinc-900 line-clamp-1">
-                    {product.title}
+                <div className="p-3 bg-zinc-50 rounded-xl border border-zinc-200 flex items-center gap-3">
+                  <div className="text-xs font-semibold text-zinc-900 truncate flex-1">
+                    {displayTitle}
                   </div>
-                  <div className="text-xs font-mono font-bold text-zinc-900 ml-auto whitespace-nowrap">
-                    {formatPrice(currentPrice * quantity)}
-                  </div>
+                  <div className="font-mono font-bold text-xs">{formatPrice(currentPrice)}</div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-zinc-700 block mb-1">
-                    Ваше имя
-                  </label>
+                  <label className="text-xs font-semibold text-zinc-700 block mb-1">{t.yourName}</label>
                   <input
                     type="text"
-                    required
-                    placeholder="Георгий"
                     value={oneClickName}
                     onChange={e => setOneClickName(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-200 p-2.5 rounded-lg text-xs focus:outline-none focus:border-black"
+                    placeholder="დავით ბერიძე"
+                    className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-black"
                   />
                 </div>
 
                 <div>
                   <label className="text-xs font-semibold text-zinc-700 block mb-1">
-                    Номер телефона
+                    {t.yourPhone} <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="+995 599 00 00 00"
                     value={oneClickPhone}
                     onChange={e => setOneClickPhone(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-200 p-2.5 rounded-lg text-xs font-mono focus:outline-none focus:border-black"
+                    placeholder="+995 599 00 00 00"
+                    className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-black font-mono"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-black hover:bg-zinc-800 text-white rounded-xl text-xs font-bold transition-colors"
+                  className="w-full py-3 bg-black hover:bg-zinc-800 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
                 >
-                  Оформить заказ
+                  {t.submitOrder}
                 </button>
               </form>
             )}
           </div>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

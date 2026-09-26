@@ -1,0 +1,82 @@
+[
+  {
+    "id": "brand-apple",
+    "name": "Apple",
+    "slug": "apple",
+    "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300&auto=format&fit=crop&q=80",
+    "description": "Инновационные компьютеры Mac, iPhone, iPad, часы Apple Watch и аудиотехника мирового уровня.",
+    "country": "США",
+    "featured": true,
+    "productCount": 8
+  },
+  {
+    "id": "brand-asus",
+    "name": "ASUS ROG",
+    "slug": "asus-rog",
+    "logo": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=300&auto=format&fit=crop&q=80",
+    "description": "Республика геймеров — бескомпромиссные ноутбуки, видеокарты и материнские платы для энтузиастов.",
+    "country": "Тайвань",
+    "featured": true,
+    "productCount": 5
+  },
+  {
+    "id": "brand-sony",
+    "name": "Sony",
+    "slug": "sony",
+    "logo": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&auto=format&fit=crop&q=80",
+    "description": "Легендарный звук, консоли PlayStation 5, камеры Alpha и премиальные OLED панели.",
+    "country": "Япония",
+    "featured": true,
+    "productCount": 6
+  },
+  {
+    "id": "brand-samsung",
+    "name": "Samsung",
+    "slug": "samsung",
+    "logo": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300&auto=format&fit=crop&q=80",
+    "description": "Передовые смартфоны Galaxy Ultra, сверхбыстрые SSD и телевизоры Neo QLED.",
+    "country": "Южная Корея",
+    "featured": true,
+    "productCount": 7
+  },
+  {
+    "id": "brand-dji",
+    "name": "DJI",
+    "slug": "dji",
+    "logo": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=300&auto=format&fit=crop&q=80",
+    "description": "Мировой лидер в области гражданских квадрокоптеров и ручных стабилизаторов камеры.",
+    "country": "Китай",
+    "featured": true,
+    "productCount": 3
+  },
+  {
+    "id": "brand-dyson",
+    "name": "Dyson",
+    "slug": "dyson",
+    "logo": "https://images.unsplash.com/photo-1558002038-1055907df827?w=300&auto=format&fit=crop&q=80",
+    "description": "Революционные беспроводные пылесосы, стайлеры Airwrap и очистители воздуха.",
+    "country": "Великобритания",
+    "featured": true,
+    "productCount": 4
+  },
+  {
+    "id": "brand-keychron",
+    "name": "Keychron",
+    "slug": "keychron",
+    "logo": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300&auto=format&fit=crop&q=80",
+    "description": "Кастомные механические клавиатуры премиального уровня с беспроводным подключением.",
+    "country": "Гонконг",
+    "featured": true,
+    "productCount": 3
+  },
+  {
+    "id": "brand-lg",
+    "name": "LG Electronics",
+    "slug": "lg",
+    "logo": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&auto=format&fit=crop&q=80",
+    "description": "Эталонные OLED телевизоры с идеальным черным цветом и игровые дисплеи UltraGear.",
+    "country": "Южная Корея",
+    "featured": true,
+    "productCount": 4
+  }
+]

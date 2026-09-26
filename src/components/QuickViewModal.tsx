@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { X, Check, ShoppingBag, SlidersHorizontal, Heart, ShieldCheck, Truck } from 'lucide-react';
 import { Product } from '@/types';
 import { useStore } from '@/context/StoreContext';
+import { useLanguage } from '@/context/LanguageContext';
+import { ProductImageZoom } from './ProductImageZoom';
 
 interface QuickViewModalProps {
   product: Product | null;
@@ -21,8 +22,8 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
     toggleWishlist,
     isInWishlist,
   } = useStore();
+  const { t, translateProductTitle, translateDescription, getLocalizedHref } = useLanguage();
 
-  const [selectedImageIdx, setSelectedImageIdx] = useState(0);
   const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
   const [added, setAdded] = useState(false);
 
@@ -31,6 +32,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
   const inCompare = isInCompare(product.id);
   const inWish = isInWishlist(product.id);
   const images = product.images && product.images.length > 0 ? product.images : [product.thumbnail];
+  const displayTitle = translateProductTitle(product.title);
 
   const handleAddToCart = () => {
     addToCart(product, 1, selectedVariants);
@@ -49,33 +51,10 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
           <X className="w-5 h-5" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-8">
-          {/* Gallery Column */}
-          <div className="flex flex-col gap-4">
-            <div className="relative aspect-square bg-zinc-50 border border-zinc-100 rounded-xl overflow-hidden flex items-center justify-center p-4">
-              <Image
-                src={images[selectedImageIdx]}
-                alt={product.title}
-                fill
-                className="object-contain"
-              />
-            </div>
-
-            {images.length > 1 && (
-              <div className="flex items-center gap-2 overflow-x-auto pb-1">
-                {images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImageIdx(idx)}
-                    className={`relative w-16 h-16 rounded-lg border-2 overflow-hidden flex-shrink-0 bg-zinc-50 transition-all ${
-                      selectedImageIdx === idx ? 'border-black' : 'border-zinc-200 opacity-70 hover:opacity-100'
-                    }`}
-                  >
-                    <Image src={img} alt="" fill className="object-contain p-1" />
-                  </button>
-                ))}
-              </div>
-            )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-8">
+          {/* Gallery Column with Touch Slider */}
+          <div className="w-full">
+            <ProductImageZoom images={images} title={displayTitle} />
           </div>
 
           {/* Details Column */}
@@ -89,7 +68,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
               </div>
 
               <h2 className="text-xl font-bold text-zinc-900 mb-3 leading-snug">
-                {product.title}
+                {displayTitle}
               </h2>
 
               {/* Price */}
@@ -105,7 +84,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
               </div>
 
               <p className="text-xs text-zinc-600 line-clamp-3 mb-4 leading-relaxed">
-                {product.shortDescription}
+                {translateDescription(product.shortDescription || product.fullDescription || '')}
               </p>
 
               {/* Variants Picker if available */}
@@ -200,11 +179,11 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
               </div>
 
               <Link
-                href={`/product/${product.slug}`}
+                href={getLocalizedHref(`/product/${product.slug}`)}
                 onClick={onClose}
                 className="block text-center text-xs font-semibold text-zinc-500 hover:text-black py-1"
               >
-                Открыть полную страницу товара со спецификациями →
+                {t.viewDetails} →
               </Link>
             </div>
           </div>

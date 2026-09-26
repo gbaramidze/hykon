@@ -1,0 +1,110 @@
+[
+  {
+    "id": "cat-ip-cameras",
+    "name": "IP კამერები",
+    "slug": "ip-cameras",
+    "level": 1,
+    "icon": "Camera",
+    "description": "IP ვიდეომეთვალყურეობის კამერები Uniview, Hikvision, HiLook, EZVIZ",
+    "productCount": 649
+  },
+  {
+    "id": "cat-analog-cameras",
+    "name": "ანალოგური / HD კამერები",
+    "slug": "analog-cameras",
+    "level": 1,
+    "icon": "Video",
+    "description": "HD-TVI, CVI, AHD ვიდეოკამერები",
+    "productCount": 72
+  },
+  {
+    "id": "cat-nvr",
+    "name": "IP ვიდეო-ჩამწერები (NVR)",
+    "slug": "ip-nvr-recorders",
+    "level": 1,
+    "icon": "Server",
+    "description": "ქსელური NVR ჩამწერები 4-დან 128 არხამდე",
+    "productCount": 62
+  },
+  {
+    "id": "cat-dvr",
+    "name": "ანალოგური ვიდეო-ჩამწერები (DVR)",
+    "slug": "analog-dvr-recorders",
+    "level": 1,
+    "icon": "Cpu",
+    "description": "ჰიბრიდული DVR და XVR ჩამწერები",
+    "productCount": 18
+  },
+  {
+    "id": "cat-alarms",
+    "name": "დაცვითი სიგნალიზაცია",
+    "slug": "security-alarm-systems",
+    "level": 1,
+    "icon": "ShieldAlert",
+    "description": "უსადენო და სადენიანი სიგნალიზაცია (Ajax, Paradox)",
+    "productCount": 143
+  },
+  {
+    "id": "cat-access-control",
+    "name": "დაშვების კონტროლი და დომოფონები",
+    "slug": "access-control-intercoms",
+    "level": 1,
+    "icon": "KeyRound",
+    "description": "IP დომოფონები, ბარათის წამკითხველები, საკეტები და ZKTeco",
+    "productCount": 107
+  },
+  {
+    "id": "cat-storage",
+    "name": "მყარი დისკები და მეხსიერება",
+    "slug": "hard-drives-storage",
+    "level": 1,
+    "icon": "HardDrive",
+    "description": "Seagate SkyHawk, WD Purple და MicroSD ბარათები",
+    "productCount": 120
+  },
+  {
+    "id": "cat-switches",
+    "name": "PoE და ქსელური სვიჩები",
+    "slug": "poe-network-switches",
+    "level": 1,
+    "icon": "Network",
+    "description": "PoE კომუტატორები 4, 8, 16, 24 პორტით",
+    "productCount": 59
+  },
+  {
+    "id": "cat-routers",
+    "name": "როუტერები და Wi-Fi წერტილები",
+    "slug": "routers-wifi-access-points",
+    "level": 1,
+    "icon": "Wifi",
+    "description": "Ruijie, Reyee, Ubiquiti, MikroTik როუტერები და Access Point-ები",
+    "productCount": 53
+  },
+  {
+    "id": "cat-power-cctv",
+    "name": "კვების ბლოკები და PoE",
+    "slug": "power-supplies-poe",
+    "level": 1,
+    "icon": "Zap",
+    "description": "კვების წყაროები 12V/24V, PoE ინჟექტორები და UPS",
+    "productCount": 40
+  },
+  {
+    "id": "cat-brackets",
+    "name": "სამაგრები და აქსესუარები",
+    "slug": "brackets-accessories",
+    "level": 1,
+    "icon": "Wrench",
+    "description": "კედლის და ჭერის სამაგრები, სამონტაჟო ყუთები (Junction Box)",
+    "productCount": 86
+  },
+  {
+    "id": "cat-cables",
+    "name": "კაბელები და კონექტორები",
+    "slug": "cables-connectors",
+    "level": 1,
+    "icon": "Cable",
+    "description": "UTP/FTP Cat5e, Cat6 კაბელები, RJ45, BNC კონექტორები",
+    "productCount": 75
+  }
+]

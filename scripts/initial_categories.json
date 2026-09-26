@@ -1,0 +1,298 @@
+[
+  {
+    "id": "cat-computers",
+    "name": "Компьютеры и Ноутбуки",
+    "slug": "computers-laptops",
+    "parentId": null,
+    "level": 1,
+    "icon": "Laptop",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80",
+    "description": "Ноутбуки, комплектующие, рабочие станции и периферия",
+    "order": 1,
+    "featured": true
+  },
+  {
+    "id": "cat-smartphones",
+    "name": "Смартфоны и Гаджеты",
+    "slug": "smartphones-gadgets",
+    "parentId": null,
+    "level": 1,
+    "icon": "Smartphone",
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&auto=format&fit=crop&q=80",
+    "description": "Флагманские смартфоны, планшеты, смарт-часы и аксессуары",
+    "order": 2,
+    "featured": true
+  },
+  {
+    "id": "cat-audio-tv",
+    "name": "ТВ, Аудио и Видео",
+    "slug": "tv-audio-video",
+    "parentId": null,
+    "level": 1,
+    "icon": "Tv",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
+    "description": "OLED телевизоры, Hi-Fi акустика, премиум наушники",
+    "order": 3,
+    "featured": true
+  },
+  {
+    "id": "cat-photo-video",
+    "name": "Фото, Видео и Дроны",
+    "slug": "photo-video-drones",
+    "parentId": null,
+    "level": 1,
+    "icon": "Camera",
+    "image": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&auto=format&fit=crop&q=80",
+    "description": "Камеры, квадрокоптеры DJI, стабилизаторы и оптика",
+    "order": 4,
+    "featured": true
+  },
+  {
+    "id": "cat-smart-home",
+    "name": "Бытовая техника и Умный дом",
+    "slug": "smart-home-appliances",
+    "parentId": null,
+    "level": 1,
+    "icon": "Home",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80",
+    "description": "Пылесосы Dyson, роботы-пылесосы, кофемашины, климат",
+    "order": 5,
+    "featured": true
+  },
+  {
+    "id": "cat-gaming",
+    "name": "Гейминг и Консоли",
+    "slug": "gaming-consoles",
+    "parentId": null,
+    "level": 1,
+    "icon": "Gamepad2",
+    "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800&auto=format&fit=crop&q=80",
+    "description": "PlayStation 5, Xbox Series X, VR шлемы и геймерская мебель",
+    "order": 6,
+    "featured": true
+  },
+  {
+    "id": "sub-laptops",
+    "name": "Ноутбуки",
+    "slug": "laptops",
+    "parentId": "cat-computers",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-pc-parts",
+    "name": "Комплектующие для ПК",
+    "slug": "pc-components",
+    "parentId": "cat-computers",
+    "level": 2,
+    "order": 2
+  },
+  {
+    "id": "sub-peripherals",
+    "name": "Мониторы и Периферия",
+    "slug": "peripherals",
+    "parentId": "cat-computers",
+    "level": 2,
+    "order": 3
+  },
+  {
+    "id": "sub3-macbooks",
+    "name": "Apple MacBook",
+    "slug": "apple-macbook",
+    "parentId": "sub-laptops",
+    "level": 3,
+    "order": 1
+  },
+  {
+    "id": "sub3-gaming-laptops",
+    "name": "Игровые ноутбуки",
+    "slug": "gaming-laptops",
+    "parentId": "sub-laptops",
+    "level": 3,
+    "order": 2
+  },
+  {
+    "id": "sub3-ultrabooks",
+    "name": "Ультрабуки для работы",
+    "slug": "ultrabooks",
+    "parentId": "sub-laptops",
+    "level": 3,
+    "order": 3
+  },
+  {
+    "id": "sub3-gpus",
+    "name": "Видеокарты (GPU)",
+    "slug": "graphics-cards",
+    "parentId": "sub-pc-parts",
+    "level": 3,
+    "order": 1
+  },
+  {
+    "id": "sub3-cpus",
+    "name": "Процессоры (CPU)",
+    "slug": "processors",
+    "parentId": "sub-pc-parts",
+    "level": 3,
+    "order": 2
+  },
+  {
+    "id": "sub3-motherboards",
+    "name": "Материнские платы",
+    "slug": "motherboards",
+    "parentId": "sub-pc-parts",
+    "level": 3,
+    "order": 3
+  },
+  {
+    "id": "sub3-ram-ssd",
+    "name": "Память и SSD",
+    "slug": "ram-and-ssd",
+    "parentId": "sub-pc-parts",
+    "level": 3,
+    "order": 4
+  },
+  {
+    "id": "sub3-monitors",
+    "name": "Игровые и Проф. Мониторы",
+    "slug": "monitors",
+    "parentId": "sub-peripherals",
+    "level": 3,
+    "order": 1
+  },
+  {
+    "id": "sub3-keyboards",
+    "name": "Механические клавиатуры",
+    "slug": "mechanical-keyboards",
+    "parentId": "sub-peripherals",
+    "level": 3,
+    "order": 2
+  },
+  {
+    "id": "sub-smartphones-all",
+    "name": "Смартфоны",
+    "slug": "smartphones",
+    "parentId": "cat-smartphones",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-smartwatches",
+    "name": "Смарт-часы и браслеты",
+    "slug": "smartwatches",
+    "parentId": "cat-smartphones",
+    "level": 2,
+    "order": 2
+  },
+  {
+    "id": "sub-tablets",
+    "name": "Планшеты",
+    "slug": "tablets",
+    "parentId": "cat-smartphones",
+    "level": 2,
+    "order": 3
+  },
+  {
+    "id": "sub3-iphone",
+    "name": "Apple iPhone",
+    "slug": "apple-iphone",
+    "parentId": "sub-smartphones-all",
+    "level": 3,
+    "order": 1
+  },
+  {
+    "id": "sub3-samsung-phones",
+    "name": "Samsung Galaxy",
+    "slug": "samsung-galaxy",
+    "parentId": "sub-smartphones-all",
+    "level": 3,
+    "order": 2
+  },
+  {
+    "id": "sub3-pixel-phones",
+    "name": "Google Pixel",
+    "slug": "google-pixel",
+    "parentId": "sub-smartphones-all",
+    "level": 3,
+    "order": 3
+  },
+  {
+    "id": "sub-headphones",
+    "name": "Наушники и гарнитуры",
+    "slug": "headphones",
+    "parentId": "cat-audio-tv",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-tvs",
+    "name": "Телевизоры OLED / QLED",
+    "slug": "televisions",
+    "parentId": "cat-audio-tv",
+    "level": 2,
+    "order": 2
+  },
+  {
+    "id": "sub-soundbars",
+    "name": "Акустика и Саундбары",
+    "slug": "speakers-soundbars",
+    "parentId": "cat-audio-tv",
+    "level": 2,
+    "order": 3
+  },
+  {
+    "id": "sub-drones",
+    "name": "Квадрокоптеры DJI",
+    "slug": "dji-drones",
+    "parentId": "cat-photo-video",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-cameras",
+    "name": "Беззеркальные камеры",
+    "slug": "mirrorless-cameras",
+    "parentId": "cat-photo-video",
+    "level": 2,
+    "order": 2
+  },
+  {
+    "id": "sub-dyson-appliances",
+    "name": "Техника Dyson",
+    "slug": "dyson-tech",
+    "parentId": "cat-smart-home",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-robot-vacuums",
+    "name": "Роботы-пылесосы",
+    "slug": "robot-vacuums",
+    "parentId": "cat-smart-home",
+    "level": 2,
+    "order": 2
+  },
+  {
+    "id": "sub-coffee-machines",
+    "name": "Премиум Кофемашины",
+    "slug": "coffee-machines",
+    "parentId": "cat-smart-home",
+    "level": 2,
+    "order": 3
+  },
+  {
+    "id": "sub-consoles",
+    "name": "Игровые консоли",
+    "slug": "consoles",
+    "parentId": "cat-gaming",
+    "level": 2,
+    "order": 1
+  },
+  {
+    "id": "sub-vr-gear",
+    "name": "VR шлемы и аксессуары",
+    "slug": "vr-headsets",
+    "parentId": "cat-gaming",
+    "level": 2,
+    "order": 2
+  }
+]

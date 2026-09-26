@@ -1,0 +1,182 @@
+[
+  {
+    "id": "cat-root-1",
+    "name": "ვიდეო მეთვალყურეობა",
+    "slug": "video-metvalyureoba",
+    "level": 1,
+    "parentId": null,
+    "featured": true,
+    "order": 1,
+    "productCount": 616
+  },
+  {
+    "id": "cat-sub-1-1",
+    "name": "კამერები",
+    "slug": "kamerebi",
+    "level": 2,
+    "parentId": "cat-root-1",
+    "featured": true,
+    "order": 1,
+    "productCount": 83
+  },
+  {
+    "id": "cat-sub-1-4",
+    "name": "ჩამწერები",
+    "slug": "chamtserebi",
+    "level": 2,
+    "parentId": "cat-root-1",
+    "featured": true,
+    "order": 4,
+    "productCount": 85
+  },
+  {
+    "id": "cat-sub-1-6",
+    "name": "IP კამერები",
+    "slug": "ip-kamerebi",
+    "level": 2,
+    "parentId": "cat-root-1",
+    "featured": false,
+    "order": 6,
+    "productCount": 196
+  },
+  {
+    "id": "cat-root-2",
+    "name": "კვების ბლოკები",
+    "slug": "kvebis-blokebi",
+    "level": 1,
+    "parentId": null,
+    "featured": true,
+    "order": 2,
+    "productCount": 12
+  },
+  {
+    "id": "cat-root-4",
+    "name": "მონიტორები",
+    "slug": "monitorebi",
+    "level": 1,
+    "parentId": null,
+    "featured": true,
+    "order": 4,
+    "productCount": 15
+  },
+  {
+    "id": "cat-root-6",
+    "name": "დაშვების სისტემები",
+    "slug": "dashvebis-sistemebi",
+    "level": 1,
+    "parentId": null,
+    "featured": true,
+    "order": 6,
+    "productCount": 73
+  },
+  {
+    "id": "cat-sub-6-1",
+    "name": "საკეტები",
+    "slug": "saketebi",
+    "level": 2,
+    "parentId": "cat-root-6",
+    "featured": true,
+    "order": 1,
+    "productCount": 23
+  },
+  {
+    "id": "cat-sub-6-3",
+    "name": "ვიდეო ინტერკომები",
+    "slug": "video-interkomebi",
+    "level": 2,
+    "parentId": "cat-root-6",
+    "featured": true,
+    "order": 3,
+    "productCount": 33
+  },
+  {
+    "id": "cat-sub-6-11",
+    "name": "ტურნიკეტები",
+    "slug": "turniketebi",
+    "level": 2,
+    "parentId": "cat-root-6",
+    "featured": false,
+    "order": 11,
+    "productCount": 3
+  },
+  {
+    "id": "cat-sub-6-12",
+    "name": "შლაგბაუმები",
+    "slug": "shlagbaumebi",
+    "level": 2,
+    "parentId": "cat-root-6",
+    "featured": false,
+    "order": 12,
+    "productCount": 14
+  },
+  {
+    "id": "cat-root-8",
+    "name": "კაბელები",
+    "slug": "kabelebi",
+    "level": 1,
+    "parentId": null,
+    "featured": true,
+    "order": 8,
+    "productCount": 91
+  },
+  {
+    "id": "cat-root-9",
+    "name": "სახანძრო სისტემები",
+    "slug": "sakhandzro-sistemebi",
+    "level": 1,
+    "parentId": null,
+    "featured": false,
+    "order": 9,
+    "productCount": 23
+  },
+  {
+    "id": "cat-root-10",
+    "name": "ქსელური მოწყობილობები",
+    "slug": "qseluri-motsyobilobebi",
+    "level": 1,
+    "parentId": null,
+    "featured": false,
+    "order": 10,
+    "productCount": 85
+  },
+  {
+    "id": "cat-sub-10-1",
+    "name": "ქსელური კომუტატორები",
+    "slug": "qseluri-komutatorebi",
+    "level": 2,
+    "parentId": "cat-root-10",
+    "featured": true,
+    "order": 1,
+    "productCount": 59
+  },
+  {
+    "id": "cat-root-12",
+    "name": "EZVIZ - ჭკვიანი სახლი",
+    "slug": "ezviz-chkviani-sakhli",
+    "level": 1,
+    "parentId": null,
+    "featured": false,
+    "order": 12,
+    "productCount": 35
+  },
+  {
+    "id": "cat-root-13",
+    "name": "მონაცემთა შემნახველი",
+    "slug": "monatsemta-shemnakhveli",
+    "level": 1,
+    "parentId": null,
+    "featured": false,
+    "order": 13,
+    "productCount": 15
+  },
+  {
+    "id": "cat-root-15",
+    "name": "AJAX",
+    "slug": "ajax",
+    "level": 1,
+    "parentId": null,
+    "featured": false,
+    "order": 15,
+    "productCount": 79
+  }
+]

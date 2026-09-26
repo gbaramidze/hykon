@@ -84,3 +84,62 @@ html, body {
     width: 100%;
   }
 }
+
+/* Rich HTML Description Styling */
+.prose-hykon {
+  color: #1e293b;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+.prose-hykon h3, .prose-hykon h4, .prose-hykon h5 {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.prose-hykon p {
+  margin-bottom: 1rem;
+}
+.prose-hykon ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.prose-hykon li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: #334155;
+}
+.prose-hykon li::before {
+  content: "•";
+  position: absolute;
+  left: 0.25rem;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.prose-hykon b, .prose-hykon strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+.prose-hykon table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+}
+.prose-hykon th, .prose-hykon td {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #e2e8f0;
+}
+.prose-hykon th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  text-align: left;
+}

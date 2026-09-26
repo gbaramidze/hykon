@@ -9,6 +9,7 @@ export interface Category {
   description?: string;
   order?: number;
   featured?: boolean;
+  productCount?: number;
 }
 
 export interface SpecItem {
@@ -34,6 +35,7 @@ export interface Product {
   id: string;
   title: string;
   slug: string;
+  oldSlug?: string;
   sku: string;
   brand: string;
   categoryId: string;
@@ -110,6 +112,7 @@ export interface CartItem {
 
 export interface OrderItem {
   productId: string;
+  productSlug?: string;
   productTitle: string;
   productSku: string;
   image: string;

@@ -7,9 +7,41 @@ import { ChevronRight, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { useStore } from '@/context/StoreContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function BrandsPage() {
   const { brands, products } = useStore();
+  const { language, translateDescription, getLocalizedHref } = useLanguage();
+
+  const labels = {
+    ka: {
+      home: 'მთავარი',
+      pageTitle: 'მწარმოებლები და ბრენდები',
+      mainHeading: 'ოფიციალური ბრენდები',
+      subHeading: 'მსოფლიო წამყვანი მწარმოებლების კატალოგი Hykon.ge-ში',
+      country: 'ქვეყანა:',
+      viewAll: 'სრული პროდუქციის ნახვა',
+      items: 'პროდუქტი',
+    },
+    en: {
+      home: 'Home',
+      pageTitle: 'Manufacturers & Brands',
+      mainHeading: 'Official Brands',
+      subHeading: 'Global top security and networking manufacturers at Hykon.ge',
+      country: 'Country:',
+      viewAll: 'View all products by',
+      items: 'products',
+    },
+    ru: {
+      home: 'Главная',
+      pageTitle: 'Производители и бренды',
+      mainHeading: 'Официальные бренды',
+      subHeading: 'Каталог мировых производителей техники, представленных в магазине Hykon.ge',
+      country: 'Страна:',
+      viewAll: 'Смотреть всю продукцию',
+      items: 'тов.',
+    },
+  }[language];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -18,19 +50,19 @@ export default function BrandsPage() {
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">
         {/* Breadcrumbs */}
         <nav className="flex items-center space-x-2 text-xs text-zinc-500 mb-6">
-          <Link href="/" className="hover:text-black">
-            Главная
+          <Link href={getLocalizedHref('/')} className="hover:text-black transition-colors">
+            {labels.home}
           </Link>
           <ChevronRight className="w-3 h-3 text-zinc-400" />
-          <span className="text-black font-semibold">Производители и бренды</span>
+          <span className="text-black font-semibold">{labels.pageTitle}</span>
         </nav>
 
         <div className="border-b border-zinc-200 pb-6 mb-8">
-          <h1 className="text-3xl font-extrabold text-zinc-950">
-            Официальные бренды
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-950">
+            {labels.mainHeading}
           </h1>
-          <p className="text-xs text-zinc-500 mt-1">
-            Каталог мировых производителей техники, представленных в магазине Hykon.ge
+          <p className="text-xs sm:text-sm text-zinc-500 mt-1">
+            {labels.subHeading}
           </p>
         </div>
 
@@ -52,25 +84,25 @@ export default function BrandsPage() {
                         {brand.name}
                       </h3>
                       <span className="text-[11px] text-zinc-400 font-medium">
-                        Страна: {brand.country}
+                        {labels.country} {brand.country}
                       </span>
                     </div>
 
                     <span className="bg-zinc-100 text-zinc-700 text-xs font-mono font-bold px-2.5 py-1 rounded-full">
-                      {count} {count === 1 ? 'товар' : 'товаров'}
+                      {count} {labels.items}
                     </span>
                   </div>
 
                   <p className="text-xs text-zinc-600 leading-relaxed line-clamp-3 mb-6">
-                    {brand.description}
+                    {translateDescription(brand.description)}
                   </p>
                 </div>
 
                 <Link
-                  href={`/catalog?brand=${brand.slug}`}
+                  href={getLocalizedHref(`/catalog?brand=${brand.slug}`)}
                   className="inline-flex items-center justify-between w-full pt-4 border-t border-zinc-100 text-xs font-bold text-zinc-900 group-hover:text-blue-600 transition-colors"
                 >
-                  <span>Смотреть всю продукцию {brand.name}</span>
+                  <span>{labels.viewAll} {brand.name}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

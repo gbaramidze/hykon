@@ -1,0 +1,110 @@
+[
+  {
+    "id": "brand-hykon",
+    "name": "Hykon",
+    "slug": "hykon",
+    "productCount": 525,
+    "logo": "",
+    "description": "Hykon official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-uniview",
+    "name": "Uniview",
+    "slug": "uniview",
+    "productCount": 348,
+    "logo": "",
+    "description": "Uniview official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-hikvision",
+    "name": "Hikvision",
+    "slug": "hikvision",
+    "productCount": 276,
+    "logo": "",
+    "description": "Hikvision official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-hilook",
+    "name": "HiLook",
+    "slug": "hilook",
+    "productCount": 107,
+    "logo": "",
+    "description": "HiLook official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-hiwatch",
+    "name": "HiWatch",
+    "slug": "hiwatch",
+    "productCount": 89,
+    "logo": "",
+    "description": "HiWatch official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-ajax",
+    "name": "Ajax",
+    "slug": "ajax",
+    "productCount": 79,
+    "logo": "",
+    "description": "Ajax official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-ezviz",
+    "name": "EZVIZ",
+    "slug": "ezviz",
+    "productCount": 44,
+    "logo": "",
+    "description": "EZVIZ official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-paradox",
+    "name": "Paradox",
+    "slug": "paradox",
+    "productCount": 7,
+    "logo": "",
+    "description": "Paradox official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-seagate",
+    "name": "Seagate",
+    "slug": "seagate",
+    "productCount": 4,
+    "logo": "",
+    "description": "Seagate official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-zkteco",
+    "name": "ZKTeco",
+    "slug": "zkteco",
+    "productCount": 2,
+    "logo": "",
+    "description": "ZKTeco official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-western-digital",
+    "name": "Western Digital",
+    "slug": "western-digital",
+    "productCount": 2,
+    "logo": "",
+    "description": "Western Digital official distributor",
+    "country": "Global"
+  },
+  {
+    "id": "brand-ruijie",
+    "name": "Ruijie",
+    "slug": "ruijie",
+    "productCount": 1,
+    "logo": "",
+    "description": "Ruijie official distributor",
+    "country": "Global"
+  }
+]

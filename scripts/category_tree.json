@@ -1,0 +1,1479 @@
+[
+  {
+    "id": "cat-root-1",
+    "name": "ვიდეო მეთვალყურეობა",
+    "slug": "video-metvalyureoba",
+    "href": "https://www.sanotech.ge/products/video-metvalyureoba",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-1-1",
+        "name": "კამერები",
+        "slug": "kamerebi",
+        "href": "https://www.sanotech.ge/products/kamerebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-2",
+        "name": "კამერები მიკროფონით",
+        "slug": "kamerebi-mikrofonit",
+        "href": "https://www.sanotech.ge/products/kamerebi-mikrofonit",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-3",
+        "name": "აკუსენსი",
+        "slug": "akusensi",
+        "href": "https://www.sanotech.ge/products/akusensi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-4",
+        "name": "ჩამწერები",
+        "slug": "chamtserebi",
+        "href": "https://www.sanotech.ge/products/chamtserebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-5",
+        "name": "ColorVu",
+        "slug": "colorvu",
+        "href": "https://www.sanotech.ge/products/colorvu",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-6",
+        "name": "IP კამერები",
+        "slug": "ip-kamerebi",
+        "href": "https://www.sanotech.ge/products/ip-kamerebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-7",
+        "name": "ანალოგი კამერები",
+        "slug": "analogi-kamerebi",
+        "href": "https://www.sanotech.ge/products/analogi-kamerebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-8",
+        "name": "კამერის აქსესუარები",
+        "slug": "kameris-aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/kameris-aqsesuarebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-9",
+        "name": "სახარჯი მასალები",
+        "slug": "sakharji-masalebi",
+        "href": "https://www.sanotech.ge/products/sakharji-masalebi",
+        "parentId": "cat-root-1",
+        "group": "კამერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-10",
+        "name": "NVR ჩამწერი",
+        "slug": "nvr-chamtseri",
+        "href": "https://www.sanotech.ge/products/nvr-chamtseri",
+        "parentId": "cat-root-1",
+        "group": "ჩამწერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-11",
+        "name": "DVR ჩამწერი",
+        "slug": "dvr-chamtseri",
+        "href": "https://www.sanotech.ge/products/dvr-chamtseri",
+        "parentId": "cat-root-1",
+        "group": "ჩამწერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-12",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-1",
+        "group": "ჩამწერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-13",
+        "name": "საავტომობილო მოწყობილობები",
+        "slug": "saavtomobilo-motsyobilobebi",
+        "href": "https://www.sanotech.ge/products/saavtomobilo-motsyobilobebi",
+        "parentId": "cat-root-1",
+        "group": "საავტომობილო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-14",
+        "name": "ელექტრო მოწყობილობები",
+        "slug": "eleqtro-motsyobilobebi",
+        "href": "https://www.sanotech.ge/products/eleqtro-motsyobilobebi",
+        "parentId": "cat-root-1",
+        "group": "ელექტრო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-15",
+        "name": "აქსესუარები/სახარჯი მასალები",
+        "slug": "aqsesuarebisakharji-masalebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebisakharji-masalebi",
+        "parentId": "cat-root-1",
+        "group": "აქსესუარები/სახარჯი მასალები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-16",
+        "name": "კომპლექტები",
+        "slug": "kompleqtebi",
+        "href": "https://www.sanotech.ge/products/kompleqtebi",
+        "parentId": "cat-root-1",
+        "group": "კომპლექტები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-1-17",
+        "name": "Hilook",
+        "slug": "hilook",
+        "href": "https://www.sanotech.ge/products/hilook",
+        "parentId": "cat-root-1",
+        "group": "Hilook",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-2",
+    "name": "კვების ბლოკები",
+    "slug": "kvebis-blokebi",
+    "href": "https://www.sanotech.ge/products/kvebis-blokebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-2-1",
+        "name": "ტრანსფორმატორები",
+        "slug": "transformatorebi",
+        "href": "https://www.sanotech.ge/products/transformatorebi",
+        "parentId": "cat-root-2",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-3",
+    "name": "მეხსიერების ბარათები",
+    "slug": "mekhsierebis-baratebi",
+    "href": "https://www.sanotech.ge/products/mekhsierebis-baratebi",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-4",
+    "name": "მონიტორები",
+    "slug": "monitorebi",
+    "href": "https://www.sanotech.ge/products/monitorebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-4-1",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-4",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-4-2",
+        "name": "ინტერაქტიული",
+        "slug": "interaqtiuli",
+        "href": "https://www.sanotech.ge/products/interaqtiuli",
+        "parentId": "cat-root-4",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-4-3",
+        "name": "კომპიუტერის",
+        "slug": "kompiuteris",
+        "href": "https://www.sanotech.ge/products/kompiuteris",
+        "parentId": "cat-root-4",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-5",
+    "name": "დაცვითი სიგნალიზაცია",
+    "slug": "datsviti-signalizatsia",
+    "href": "https://www.sanotech.ge/products/datsviti-signalizatsia",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-5-1",
+        "name": "უსადენო მოწყობილობები",
+        "slug": "usadeno-motsyobilobebi",
+        "href": "https://www.sanotech.ge/products/usadeno-motsyobilobebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-2",
+        "name": "პანელები",
+        "slug": "panelebi",
+        "href": "https://www.sanotech.ge/products/panelebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-3",
+        "name": "დეტექტორები",
+        "slug": "deteqtorebi",
+        "href": "https://www.sanotech.ge/products/deteqtorebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-4",
+        "name": "კლავიატურები",
+        "slug": "klaviaturebi",
+        "href": "https://www.sanotech.ge/products/klaviaturebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-5",
+        "name": "მოდულები",
+        "slug": "modulebi",
+        "href": "https://www.sanotech.ge/products/modulebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-6",
+        "name": "მართვის პანელები",
+        "slug": "martvis-panelebi",
+        "href": "https://www.sanotech.ge/products/martvis-panelebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-7",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-5-8",
+        "name": "სირენები",
+        "slug": "sirenebi",
+        "href": "https://www.sanotech.ge/products/sirenebi",
+        "parentId": "cat-root-5",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-6",
+    "name": "დაშვების სისტემები",
+    "slug": "dashvebis-sistemebi",
+    "href": "https://www.sanotech.ge/products/dashvebis-sistemebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-6-1",
+        "name": "საკეტები",
+        "slug": "saketebi",
+        "href": "https://www.sanotech.ge/products/saketebi",
+        "parentId": "cat-root-6",
+        "group": "საკეტები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-2",
+        "name": "მეტალოდეტექტორები",
+        "slug": "metalodeteqtorebi",
+        "href": "https://www.sanotech.ge/products/metalodeteqtorebi",
+        "parentId": "cat-root-6",
+        "group": "მეტალოდეტექტორები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-3",
+        "name": "ვიდეო ინტერკომები",
+        "slug": "video-interkomebi",
+        "href": "https://www.sanotech.ge/products/video-interkomebi",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-4",
+        "name": "დომოფონები",
+        "slug": "domofonebi",
+        "href": "https://www.sanotech.ge/products/domofonebi",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-5",
+        "name": "დომოფონის ღილაკი",
+        "slug": "domofonis-ghilaki",
+        "href": "https://www.sanotech.ge/products/domofonis-ghilaki",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-6",
+        "name": "ვიდეო დომოფონი",
+        "slug": "video-domofoni",
+        "href": "https://www.sanotech.ge/products/video-domofoni",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-7",
+        "name": "დომოფონის მონიტორი",
+        "slug": "domofonis-monitori",
+        "href": "https://www.sanotech.ge/products/domofonis-monitori",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-8",
+        "name": "ინტერკომები",
+        "slug": "interkomebi",
+        "href": "https://www.sanotech.ge/products/interkomebi",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-9",
+        "name": "სახის ამოცნობის ტერმინალი",
+        "slug": "sakhis-amotsnobis-terminali",
+        "href": "https://www.sanotech.ge/products/sakhis-amotsnobis-terminali",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-10",
+        "name": "სხვა",
+        "slug": "skhva",
+        "href": "https://www.sanotech.ge/products/skhva",
+        "parentId": "cat-root-6",
+        "group": "ვიდეო ინტერკომები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-11",
+        "name": "ტურნიკეტები",
+        "slug": "turniketebi",
+        "href": "https://www.sanotech.ge/products/turniketebi",
+        "parentId": "cat-root-6",
+        "group": "ტურნიკეტები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-12",
+        "name": "შლაგბაუმები",
+        "slug": "shlagbaumebi",
+        "href": "https://www.sanotech.ge/products/shlagbaumebi",
+        "parentId": "cat-root-6",
+        "group": "შლაგბაუმები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-13",
+        "name": "შლაგბაუმის მაკომპლექტებლები",
+        "slug": "shlagbaumis-makompleqteblebi",
+        "href": "https://www.sanotech.ge/products/shlagbaumis-makompleqteblebi",
+        "parentId": "cat-root-6",
+        "group": "შლაგბაუმები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-14",
+        "name": "შლაგბაუმი",
+        "slug": "shlagbaumi",
+        "href": "https://www.sanotech.ge/products/shlagbaumi",
+        "parentId": "cat-root-6",
+        "group": "შლაგბაუმები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-15",
+        "name": "სახის ამომცნობი ტერმინალები",
+        "slug": "sakhis-amomtsnobi-terminalebi",
+        "href": "https://www.sanotech.ge/products/sakhis-amomtsnobi-terminalebi",
+        "parentId": "cat-root-6",
+        "group": "სახის ამომცნობი ტერმინალები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-16",
+        "name": "წვდომის მართვის პანელები",
+        "slug": "tsvdomis-martvis-panelebi",
+        "href": "https://www.sanotech.ge/products/tsvdomis-martvis-panelebi",
+        "parentId": "cat-root-6",
+        "group": "წვდომის მართვის პანელები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-17",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-6",
+        "group": "აქსესუარები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-18",
+        "name": "სახარჯი მასალები",
+        "slug": "sakharji-masalebi",
+        "href": "https://www.sanotech.ge/products/sakharji-masalebi",
+        "parentId": "cat-root-6",
+        "group": "სახარჯი მასალები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-19",
+        "name": "წამკითხველები",
+        "slug": "tsamkitkhvelebi",
+        "href": "https://www.sanotech.ge/products/tsamkitkhvelebi",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-20",
+        "name": "ბარათის მკითხველები",
+        "slug": "baratis-mkitkhvelebi",
+        "href": "https://www.sanotech.ge/products/baratis-mkitkhvelebi",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-21",
+        "name": "კლავიატურა",
+        "slug": "klaviatura",
+        "href": "https://www.sanotech.ge/products/klaviatura",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-22",
+        "name": "თითს ანაბეჭდის წამკითხველი",
+        "slug": "tits-anabechdis-tsamkitkhveli",
+        "href": "https://www.sanotech.ge/products/tits-anabechdis-tsamkitkhveli",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-23",
+        "name": "ბარათები",
+        "slug": "baratebi",
+        "href": "https://www.sanotech.ge/products/baratebi",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-6-24",
+        "name": "ღილაკები",
+        "slug": "ghilakebi",
+        "href": "https://www.sanotech.ge/products/ghilakebi",
+        "parentId": "cat-root-6",
+        "group": "წამკითხველები",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-7",
+    "name": "საკონფერენციო მოწყობილობები",
+    "slug": "sakonferentsio-motsyobilobebi",
+    "href": "https://www.sanotech.ge/products/sakonferentsio-motsyobilobebi",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-8",
+    "name": "კაბელები",
+    "slug": "kabelebi",
+    "href": "https://www.sanotech.ge/products/kabelebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-8-1",
+        "name": "ქსელის კაბელი",
+        "slug": "qselis-kabeli",
+        "href": "https://www.sanotech.ge/products/qselis-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-2",
+        "name": "სიგნალიზაციის კაბელი",
+        "slug": "signalizatsiis-kabeli",
+        "href": "https://www.sanotech.ge/products/signalizatsiis-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-3",
+        "name": "CCTV კაბელი",
+        "slug": "cctv-kabeli",
+        "href": "https://www.sanotech.ge/products/cctv-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-4",
+        "name": "სახანძრო კაბელი",
+        "slug": "sakhandzro-kabeli",
+        "href": "https://www.sanotech.ge/products/sakhandzro-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-5",
+        "name": "დენის კაბელი",
+        "slug": "denis-kabeli",
+        "href": "https://www.sanotech.ge/products/denis-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-6",
+        "name": "ოპტიკური კაბელი",
+        "slug": "optikuri-kabeli",
+        "href": "https://www.sanotech.ge/products/optikuri-kabeli",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-8-7",
+        "name": "ღვედი",
+        "slug": "ghvedi",
+        "href": "https://www.sanotech.ge/products/ghvedi",
+        "parentId": "cat-root-8",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-9",
+    "name": "სახანძრო სისტემები",
+    "slug": "sakhandzro-sistemebi",
+    "href": "https://www.sanotech.ge/products/sakhandzro-sistemebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-9-1",
+        "name": "ხანძარქრობის სისტემები",
+        "slug": "khandzarqrobis-sistemebi",
+        "href": "https://www.sanotech.ge/products/khandzarqrobis-sistemebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-2",
+        "name": "ჩამკეტები",
+        "slug": "chamketebi",
+        "href": "https://www.sanotech.ge/products/chamketebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-3",
+        "name": "მილები და ტუმბოები",
+        "slug": "milebi-da-tumboebi",
+        "href": "https://www.sanotech.ge/products/milebi-da-tumboebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-4",
+        "name": "მილის საკიდები",
+        "slug": "milis-sakidebi",
+        "href": "https://www.sanotech.ge/products/milis-sakidebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-5",
+        "name": "მილის სამაგრები",
+        "slug": "milis-samagrebi",
+        "href": "https://www.sanotech.ge/products/milis-samagrebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-6",
+        "name": "მილის გადასაბმელი/გადამყვანი",
+        "slug": "milis-gadasabmeligadamyvani",
+        "href": "https://www.sanotech.ge/products/milis-gadasabmeligadamyvani",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-7",
+        "name": "მილები",
+        "slug": "milebi",
+        "href": "https://www.sanotech.ge/products/milebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-8",
+        "name": "სარქველები",
+        "slug": "sarqvelebi",
+        "href": "https://www.sanotech.ge/products/sarqvelebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-9",
+        "name": "მექანიკური ჯვარედინი უნაგირი",
+        "slug": "meqanikuri-jvaredini-unagiri",
+        "href": "https://www.sanotech.ge/products/meqanikuri-jvaredini-unagiri",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-10",
+        "name": "ღარიანი შეერთებით",
+        "slug": "ghariani-sheertebit",
+        "href": "https://www.sanotech.ge/products/ghariani-sheertebit",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-11",
+        "name": "ხრახნიანი შეერთებით",
+        "slug": "khrakhniani-sheertebit",
+        "href": "https://www.sanotech.ge/products/khrakhniani-sheertebit",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-12",
+        "name": "ფიტინგები",
+        "slug": "fitingebi",
+        "href": "https://www.sanotech.ge/products/fitingebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-13",
+        "name": "სპრინკლერები",
+        "slug": "sprinklerebi",
+        "href": "https://www.sanotech.ge/products/sprinklerebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-14",
+        "name": "სახანძრო კარადები",
+        "slug": "sakhandzro-karadebi",
+        "href": "https://www.sanotech.ge/products/sakhandzro-karadebi",
+        "parentId": "cat-root-9",
+        "group": "ხანძარქრობის სისტემები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-15",
+        "name": "სახანძრო სიგნალიზაცია",
+        "slug": "sakhandzro-signalizatsia",
+        "href": "https://www.sanotech.ge/products/sakhandzro-signalizatsia",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-16",
+        "name": "მისამართული სისტემები",
+        "slug": "misamartuli-sistemebi",
+        "href": "https://www.sanotech.ge/products/misamartuli-sistemebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-17",
+        "name": "არამისამართული სისტემები",
+        "slug": "aramisamartuli-sistemebi",
+        "href": "https://www.sanotech.ge/products/aramisamartuli-sistemebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-18",
+        "name": "სპეციალური დეტექტორები",
+        "slug": "spetsialuri-deteqtorebi",
+        "href": "https://www.sanotech.ge/products/spetsialuri-deteqtorebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-19",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-20",
+        "name": "დეტექტორები",
+        "slug": "deteqtorebi",
+        "href": "https://www.sanotech.ge/products/deteqtorebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-21",
+        "name": "CO დეტექტორები",
+        "slug": "co-deteqtorebi",
+        "href": "https://www.sanotech.ge/products/co-deteqtorebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-22",
+        "name": "კვამლის დეტექტორი",
+        "slug": "kvamlis-deteqtori",
+        "href": "https://www.sanotech.ge/products/kvamlis-deteqtori",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-23",
+        "name": "ტემპერატურის დეტექტორი",
+        "slug": "temperaturis-deteqtori",
+        "href": "https://www.sanotech.ge/products/temperaturis-deteqtori",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-24",
+        "name": "ბუნებრივი აირის დეტექტორი",
+        "slug": "bunebrivi-airis-deteqtori",
+        "href": "https://www.sanotech.ge/products/bunebrivi-airis-deteqtori",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-25",
+        "name": "სახანძრო დეტექტორი",
+        "slug": "sakhandzro-deteqtori",
+        "href": "https://www.sanotech.ge/products/sakhandzro-deteqtori",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-26",
+        "name": "სახარჯი მასალები",
+        "slug": "sakharji-masalebi",
+        "href": "https://www.sanotech.ge/products/sakharji-masalebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-27",
+        "name": "გამოძახების ღილაკები",
+        "slug": "gamodzakhebis-ghilakebi",
+        "href": "https://www.sanotech.ge/products/gamodzakhebis-ghilakebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-28",
+        "name": "სირენები",
+        "slug": "sirenebi",
+        "href": "https://www.sanotech.ge/products/sirenebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-29",
+        "name": "პანელები",
+        "slug": "panelebi",
+        "href": "https://www.sanotech.ge/products/panelebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-9-30",
+        "name": "მოდულები",
+        "slug": "modulebi",
+        "href": "https://www.sanotech.ge/products/modulebi",
+        "parentId": "cat-root-9",
+        "group": "სახანძრო სიგნალიზაცია",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-10",
+    "name": "ქსელური მოწყობილობები",
+    "slug": "qseluri-motsyobilobebi",
+    "href": "https://www.sanotech.ge/products/qseluri-motsyobilobebi",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-10-1",
+        "name": "ქსელური კომუტატორები",
+        "slug": "qseluri-komutatorebi",
+        "href": "https://www.sanotech.ge/products/qseluri-komutatorebi",
+        "parentId": "cat-root-10",
+        "group": "ქსელური კომუტატორები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-2",
+        "name": "არა მართვადი",
+        "slug": "ara-martvadi",
+        "href": "https://www.sanotech.ge/products/ara-martvadi",
+        "parentId": "cat-root-10",
+        "group": "ქსელური კომუტატორები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-3",
+        "name": "მართვადი",
+        "slug": "martvadi",
+        "href": "https://www.sanotech.ge/products/martvadi",
+        "parentId": "cat-root-10",
+        "group": "ქსელური კომუტატორები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-4",
+        "name": "Wi-Fi როუტერები",
+        "slug": "wi-fi-routerebi",
+        "href": "https://www.sanotech.ge/products/wi-fi-routerebi",
+        "parentId": "cat-root-10",
+        "group": "Wi-Fi როუტერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-5",
+        "name": "3G/4G როუტერი",
+        "slug": "3g4g-routeri",
+        "href": "https://www.sanotech.ge/products/3g4g-routeri",
+        "parentId": "cat-root-10",
+        "group": "Wi-Fi როუტერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-6",
+        "name": "სახლის როუტერი",
+        "slug": "sakhlis-routeri",
+        "href": "https://www.sanotech.ge/products/sakhlis-routeri",
+        "parentId": "cat-root-10",
+        "group": "Wi-Fi როუტერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-7",
+        "name": "SOHO როუტერი",
+        "slug": "soho-routeri",
+        "href": "https://www.sanotech.ge/products/soho-routeri",
+        "parentId": "cat-root-10",
+        "group": "Wi-Fi როუტერები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-8",
+        "name": "საკომუნიკაციო კარადა",
+        "slug": "sakomunikatsio-karada",
+        "href": "https://www.sanotech.ge/products/sakomunikatsio-karada",
+        "parentId": "cat-root-10",
+        "group": "საკომუნიკაციო კარადა",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-9",
+        "name": "კედლის რეკები",
+        "slug": "kedlis-rekebi",
+        "href": "https://www.sanotech.ge/products/kedlis-rekebi",
+        "parentId": "cat-root-10",
+        "group": "საკომუნიკაციო კარადა",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-10",
+        "name": "დასადგამი რეკები",
+        "slug": "dasadgami-rekebi",
+        "href": "https://www.sanotech.ge/products/dasadgami-rekebi",
+        "parentId": "cat-root-10",
+        "group": "საკომუნიკაციო კარადა",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-11",
+        "name": "რეკის აქსესუარები",
+        "slug": "rekis-aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/rekis-aqsesuarebi",
+        "parentId": "cat-root-10",
+        "group": "საკომუნიკაციო კარადა",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-12",
+        "name": "ქსელის უკაბელო მოწყობილობები",
+        "slug": "qselis-ukabelo-motsyobilobebi",
+        "href": "https://www.sanotech.ge/products/qselis-ukabelo-motsyobilobebi",
+        "parentId": "cat-root-10",
+        "group": "ქსელის უკაბელო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-13",
+        "name": "დაშვების წერტილები",
+        "slug": "dashvebis-tsertilebi",
+        "href": "https://www.sanotech.ge/products/dashvebis-tsertilebi",
+        "parentId": "cat-root-10",
+        "group": "ქსელის უკაბელო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-14",
+        "name": "Outdoor Access Point & Bridges",
+        "slug": "outdoor-access-point-bridges",
+        "href": "https://www.sanotech.ge/products/outdoor-access-point-bridges",
+        "parentId": "cat-root-10",
+        "group": "ქსელის უკაბელო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-15",
+        "name": "Range Extenders",
+        "slug": "range-extenders",
+        "href": "https://www.sanotech.ge/products/range-extenders",
+        "parentId": "cat-root-10",
+        "group": "ქსელის უკაბელო მოწყობილობები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-16",
+        "name": "აქსესუარები",
+        "slug": "aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/aqsesuarebi",
+        "parentId": "cat-root-10",
+        "group": "აქსესუარები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-17",
+        "name": "SFP მოდულები",
+        "slug": "sfp-modulebi",
+        "href": "https://www.sanotech.ge/products/sfp-modulebi",
+        "parentId": "cat-root-10",
+        "group": "აქსესუარები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-18",
+        "name": "ფაერვოლი",
+        "slug": "faervoli",
+        "href": "https://www.sanotech.ge/products/faervoli",
+        "parentId": "cat-root-10",
+        "group": "ფაერვოლი",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-19",
+        "name": "ქსელის აქსესუარები",
+        "slug": "qselis-aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/qselis-aqsesuarebi",
+        "parentId": "cat-root-10",
+        "group": "ქსელის აქსესუარები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-20",
+        "name": "მედია კონვერტორები",
+        "slug": "media-konvertorebi",
+        "href": "https://www.sanotech.ge/products/media-konvertorebi",
+        "parentId": "cat-root-10",
+        "group": "მედია კონვერტორები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-10-21",
+        "name": "Poe ინჟექტორი",
+        "slug": "poe-inzheqtori",
+        "href": "https://www.sanotech.ge/products/poe-inzheqtori",
+        "parentId": "cat-root-10",
+        "group": "Poe ინჟექტორი",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-11",
+    "name": "ელექტრო საქონელი",
+    "slug": "eleqtro-saqoneli",
+    "href": "https://www.sanotech.ge/products/eleqtro-saqoneli",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-11-1",
+        "name": "უწყვეტი კვების წყაროები",
+        "slug": "utsyveti-kvebis-tsyaroebi",
+        "href": "https://www.sanotech.ge/products/utsyveti-kvebis-tsyaroebi",
+        "parentId": "cat-root-11",
+        "group": "უწყვეტი კვების წყაროები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-11-2",
+        "name": "Line-Interactive",
+        "slug": "line-interactive",
+        "href": "https://www.sanotech.ge/products/line-interactive",
+        "parentId": "cat-root-11",
+        "group": "უწყვეტი კვების წყაროები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-11-3",
+        "name": "On-Line",
+        "slug": "on-line",
+        "href": "https://www.sanotech.ge/products/on-line",
+        "parentId": "cat-root-11",
+        "group": "უწყვეტი კვების წყაროები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-11-4",
+        "name": "UPS ის აქსესუარები",
+        "slug": "ups-is-aqsesuarebi",
+        "href": "https://www.sanotech.ge/products/ups-is-aqsesuarebi",
+        "parentId": "cat-root-11",
+        "group": "უწყვეტი კვების წყაროები",
+        "level": 2
+      },
+      {
+        "id": "cat-sub-11-5",
+        "name": "აკუმულატორები",
+        "slug": "akumulatorebi",
+        "href": "https://www.sanotech.ge/products/akumulatorebi",
+        "parentId": "cat-root-11",
+        "group": "აკუმულატორები",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-12",
+    "name": "EZVIZ - ჭკვიანი სახლი",
+    "slug": "ezviz-chkviani-sakhli",
+    "href": "https://www.sanotech.ge/products/ezviz-chkviani-sakhli",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-12-1",
+        "name": "სმარტ კამერები",
+        "slug": "smart-kamerebi",
+        "href": "https://www.sanotech.ge/products/smart-kamerebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-2",
+        "name": "უსაფრთხოების მართვის პანელები",
+        "slug": "usafrtkhoebis-martvis-panelebi",
+        "href": "https://www.sanotech.ge/products/usafrtkhoebis-martvis-panelebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-3",
+        "name": "დეტექტორები",
+        "slug": "deteqtorebi",
+        "href": "https://www.sanotech.ge/products/deteqtorebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-4",
+        "name": "ჭკვიანი სახლის სისტემები",
+        "slug": "chkviani-sakhlis-sistemebi",
+        "href": "https://www.sanotech.ge/products/chkviani-sakhlis-sistemebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-5",
+        "name": "მზით დამუხტვის პანელები",
+        "slug": "mzit-damukhtvis-panelebi",
+        "href": "https://www.sanotech.ge/products/mzit-damukhtvis-panelebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-6",
+        "name": "კომპლექტები",
+        "slug": "kompleqtebi",
+        "href": "https://www.sanotech.ge/products/kompleqtebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-7",
+        "name": "ჩამწერები",
+        "slug": "chamtserebi",
+        "href": "https://www.sanotech.ge/products/chamtserebi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-12-8",
+        "name": "ვიდეო ინტერკომი",
+        "slug": "video-interkomi",
+        "href": "https://www.sanotech.ge/products/video-interkomi",
+        "parentId": "cat-root-12",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-13",
+    "name": "მონაცემთა შემნახველი",
+    "slug": "monatsemta-shemnakhveli",
+    "href": "https://www.sanotech.ge/products/monatsemta-shemnakhveli",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-13-1",
+        "name": "მყარი დისკები",
+        "slug": "myari-diskebi",
+        "href": "https://www.sanotech.ge/products/myari-diskebi",
+        "parentId": "cat-root-13",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-13-2",
+        "name": "SSD",
+        "slug": "ssd",
+        "href": "https://www.sanotech.ge/products/ssd",
+        "parentId": "cat-root-13",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-13-3",
+        "name": "SDcard",
+        "slug": "sdcard",
+        "href": "https://www.sanotech.ge/products/sdcard",
+        "parentId": "cat-root-13",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-14",
+    "name": "სახანძრო პანელი",
+    "slug": "sakhandzro-paneli",
+    "href": "https://www.sanotech.ge/products/sakhandzro-paneli",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-15",
+    "name": "AJAX",
+    "slug": "ajax",
+    "href": "https://www.sanotech.ge/products/ajax",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-15-1",
+        "name": "შეღწევისგან დაცვა",
+        "slug": "sheghtsevisgan-datsva",
+        "href": "https://www.sanotech.ge/products/sheghtsevisgan-datsva",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-2",
+        "name": "სახანძრო უსაფრთხოება",
+        "slug": "sakhandzro-usafrtkhoeba",
+        "href": "https://www.sanotech.ge/products/sakhandzro-usafrtkhoeba",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-3",
+        "name": "გამოძახების ღილაკი",
+        "slug": "gamodzakhebis-ghilaki",
+        "href": "https://www.sanotech.ge/products/gamodzakhebis-ghilaki",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-4",
+        "name": "კარის სენსორი",
+        "slug": "karis-sensori",
+        "href": "https://www.sanotech.ge/products/karis-sensori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-5",
+        "name": "პანელი",
+        "slug": "paneli",
+        "href": "https://www.sanotech.ge/products/paneli",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-6",
+        "name": "სამართავი პულტი",
+        "slug": "samartavi-pulti",
+        "href": "https://www.sanotech.ge/products/samartavi-pulti",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-7",
+        "name": "სირენა",
+        "slug": "sirena",
+        "href": "https://www.sanotech.ge/products/sirena",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-8",
+        "name": "შუშის მსხვრევის დეტექტორი",
+        "slug": "shushis-mskhvrevis-deteqtori",
+        "href": "https://www.sanotech.ge/products/shushis-mskhvrevis-deteqtori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-9",
+        "name": "ჰიბრიდული დეტექტორი",
+        "slug": "hibriduli-deteqtori",
+        "href": "https://www.sanotech.ge/products/hibriduli-deteqtori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-10",
+        "name": "წყლის ჩამკეტი",
+        "slug": "tsylis-chamketi",
+        "href": "https://www.sanotech.ge/products/tsylis-chamketi",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-11",
+        "name": "წყლის გაჟონვის დეტექტორი",
+        "slug": "tsylis-gazhonvis-deteqtori",
+        "href": "https://www.sanotech.ge/products/tsylis-gazhonvis-deteqtori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-12",
+        "name": "კვამლის დეტექტორი",
+        "slug": "kvamlis-deteqtori",
+        "href": "https://www.sanotech.ge/products/kvamlis-deteqtori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-13",
+        "name": "მოძრაობის დეტექტორი",
+        "slug": "modzraobis-deteqtori",
+        "href": "https://www.sanotech.ge/products/modzraobis-deteqtori",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-14",
+        "name": "რეპიტერი",
+        "slug": "repiteri",
+        "href": "https://www.sanotech.ge/products/repiteri",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-15",
+        "name": "სენსორული კლავიატურა",
+        "slug": "sensoruli-klaviatura",
+        "href": "https://www.sanotech.ge/products/sensoruli-klaviatura",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      },
+      {
+        "id": "cat-sub-15-16",
+        "name": "სხვა",
+        "slug": "skhva",
+        "href": "https://www.sanotech.ge/products/skhva",
+        "parentId": "cat-root-15",
+        "group": null,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": "cat-root-16",
+    "name": "აქსესუარები და სახარჯი მასალა",
+    "slug": "aqsesuarebi-da-sakharji-masala",
+    "href": "https://www.sanotech.ge/products/aqsesuarebi-da-sakharji-masala",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-17",
+    "name": "სპეც პროდუქტები",
+    "slug": "spets-produqtebi",
+    "href": "https://www.sanotech.ge/products/spets-produqtebi",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-18",
+    "name": "ჭკვიანი საკეტები",
+    "slug": "chkviani-saketebi",
+    "href": "https://www.sanotech.ge/products/chkviani-saketebi",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-19",
+    "name": "სახანძრო პანელები",
+    "slug": "sakhandzro-panelebi",
+    "href": "https://www.sanotech.ge/products/sakhandzro-panelebi",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-20",
+    "name": "მართვის პულტები",
+    "slug": "martvis-pultebii",
+    "href": "https://www.sanotech.ge/products/martvis-pultebii",
+    "level": 1,
+    "children": []
+  },
+  {
+    "id": "cat-root-21",
+    "name": "FMG",
+    "slug": "fmg",
+    "href": "https://www.sanotech.ge/products/fmg",
+    "level": 1,
+    "children": [
+      {
+        "id": "cat-sub-21-1",
+        "name": "მართვის პულტები",
+        "slug": "martvis-pultebi",
+        "href": "https://www.sanotech.ge/products/martvis-pultebi",
+        "parentId": "cat-root-21",
+        "group": null,
+        "level": 2
+      }
+    ]
+  }
+]

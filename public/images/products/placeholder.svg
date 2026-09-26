@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#F8FAFC"/>
+  <rect x="140" y="140" width="120" height="120" rx="16" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M170 210L190 185L210 210L225 195L245 220H155L170 210Z" fill="#94A3B8"/>
+  <circle cx="175" cy="175" r="8" fill="#94A3B8"/>
+  <text x="200" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748B">HYKON TECH</text>
+</svg>
