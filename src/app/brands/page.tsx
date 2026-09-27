@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { BrandLogo } from '@/components/BrandLogo';
 import { useStore } from '@/context/StoreContext';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -75,20 +75,20 @@ export default function BrandsPage() {
             return (
               <div
                 key={brand.id}
-                className="bg-white border border-zinc-200 hover:border-zinc-900 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col justify-between group"
+                className="bg-white border border-zinc-200 hover:border-zinc-900 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-extrabold text-zinc-900 group-hover:text-blue-600 transition-colors font-mono">
-                        {brand.name}
-                      </h3>
+                    <div className="flex-1 min-w-0 pr-2">
+                      <div className="h-8 flex items-center mb-2">
+                        <BrandLogo brandName={brand.name} className="h-7 w-auto max-w-[140px]" />
+                      </div>
                       <span className="text-[11px] text-zinc-400 font-medium">
                         {labels.country} {brand.country}
                       </span>
                     </div>
 
-                    <span className="bg-zinc-100 text-zinc-700 text-xs font-mono font-bold px-2.5 py-1 rounded-full">
+                    <span className="bg-zinc-100 text-zinc-700 text-xs font-mono font-bold px-2.5 py-1 rounded-full shrink-0">
                       {count} {labels.items}
                     </span>
                   </div>

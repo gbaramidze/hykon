@@ -1,74 +1,119 @@
 [
   {
-    "id": "brand-hykon",
-    "name": "Hykon",
-    "slug": "hykon",
-    "productCount": 525,
-    "logo": "",
-    "description": "Hykon official distributor",
+    "id": "brand-hikvision",
+    "name": "Hikvision",
+    "slug": "hikvision",
+    "productCount": 457,
+    "logo": "/images/brands/hikvision.svg",
+    "description": "Hikvision Official Security & Surveillance",
     "country": "Global"
   },
   {
     "id": "brand-uniview",
     "name": "Uniview",
     "slug": "uniview",
-    "productCount": 348,
-    "logo": "",
-    "description": "Uniview official distributor",
+    "productCount": 338,
+    "logo": "/images/brands/uniview.png",
+    "description": "Uniview IP Video Surveillance Pioneer",
     "country": "Global"
   },
   {
-    "id": "brand-hikvision",
-    "name": "Hikvision",
-    "slug": "hikvision",
-    "productCount": 276,
-    "logo": "",
-    "description": "Hikvision official distributor",
-    "country": "Global"
-  },
-  {
-    "id": "brand-hilook",
-    "name": "HiLook",
-    "slug": "hilook",
-    "productCount": 107,
-    "logo": "",
-    "description": "HiLook official distributor",
+    "id": "brand-accessories",
+    "name": "Accessories",
+    "slug": "accessories",
+    "productCount": 258,
+    "logo": "/images/brands/accessories.svg",
+    "description": "Cables, Mounts, Power Supplies & Connectors",
     "country": "Global"
   },
   {
     "id": "brand-hiwatch",
     "name": "HiWatch",
     "slug": "hiwatch",
-    "productCount": 89,
-    "logo": "",
-    "description": "HiWatch official distributor",
+    "productCount": 108,
+    "logo": "/images/brands/hiwatch.svg",
+    "description": "HiWatch by Hikvision Professional Video",
+    "country": "Global"
+  },
+  {
+    "id": "brand-hilook",
+    "name": "HiLook",
+    "slug": "hilook",
+    "productCount": 108,
+    "logo": "/images/brands/hilook.png",
+    "description": "HiLook by Hikvision Cost-Effective Security",
     "country": "Global"
   },
   {
     "id": "brand-ajax",
     "name": "Ajax",
     "slug": "ajax",
-    "productCount": 79,
-    "logo": "",
-    "description": "Ajax official distributor",
-    "country": "Global"
+    "productCount": 80,
+    "logo": "/images/brands/ajax.svg",
+    "description": "Ajax Systems Smart Wireless Security & Alarms",
+    "country": "Europe"
   },
   {
     "id": "brand-ezviz",
     "name": "EZVIZ",
     "slug": "ezviz",
-    "productCount": 44,
-    "logo": "",
-    "description": "EZVIZ official distributor",
+    "productCount": 46,
+    "logo": "/images/brands/ezviz.png",
+    "description": "EZVIZ Smart Home & Cloud Cameras",
+    "country": "Global"
+  },
+  {
+    "id": "brand-detnov",
+    "name": "Detnov",
+    "slug": "detnov",
+    "productCount": 28,
+    "logo": "/images/brands/detnov.png",
+    "description": "Detnov Fire Detection & Safety Systems",
+    "country": "Spain"
+  },
+  {
+    "id": "brand-yli",
+    "name": "YLI",
+    "slug": "yli",
+    "productCount": 11,
+    "logo": "/images/brands/yli.svg",
+    "description": "YLI Security Equipment",
+    "country": "Global"
+  },
+  {
+    "id": "brand-unipos",
+    "name": "Unipos",
+    "slug": "unipos",
+    "productCount": 10,
+    "logo": "/images/brands/unipos.png",
+    "description": "Unipos Security Equipment",
     "country": "Global"
   },
   {
     "id": "brand-paradox",
     "name": "Paradox",
     "slug": "paradox",
-    "productCount": 7,
-    "logo": "",
-    "description": "Paradox official distributor",
+    "productCount": 9,
+    "logo": "/images/brands/paradox.png",
+    "description": "Paradox Security Systems High Reliability",
+    "country": "Canada"
+  },
+  {
+    "id": "brand-ubiquiti",
+    "name": "Ubiquiti",
+    "slug": "ubiquiti",
+    "productCount": 6,
+    "logo": "/images/brands/ubiquiti.png",
+    "description": "Ubiquiti UniFi Networking Solutions",
+    "country": "USA"
+  },
+  {
+    "id": "brand-ruijie",
+    "name": "Ruijie",
+    "slug": "ruijie",
+    "productCount": 5,
+    "logo": "/images/brands/ruijie.svg",
+    "description": "Ruijie Networks & Reyee Enterprise Wi-Fi",
     "country": "Global"
   },
   {
@@ -76,8 +121,35 @@
     "name": "Seagate",
     "slug": "seagate",
     "productCount": 4,
-    "logo": "",
-    "description": "Seagate official distributor",
+    "logo": "/images/brands/seagate.svg",
+    "description": "Seagate SkyHawk Surveillance Hard Drives",
+    "country": "USA"
+  },
+  {
+    "id": "brand-bigbat",
+    "name": "BigBat",
+    "slug": "bigbat",
+    "productCount": 4,
+    "logo": "/images/brands/bigbat.png",
+    "description": "BigBat Security Equipment",
+    "country": "Global"
+  },
+  {
+    "id": "brand-cdvi",
+    "name": "CDVI",
+    "slug": "cdvi",
+    "productCount": 4,
+    "logo": "/images/brands/cdvi.png",
+    "description": "CDVI Security Equipment",
+    "country": "Global"
+  },
+  {
+    "id": "brand-gsn",
+    "name": "GSN",
+    "slug": "gsn",
+    "productCount": 2,
+    "logo": "/images/brands/gsn.png",
+    "description": "GSN Security Equipment",
     "country": "Global"
   },
   {
@@ -85,8 +157,8 @@
     "name": "ZKTeco",
     "slug": "zkteco",
     "productCount": 2,
-    "logo": "",
-    "description": "ZKTeco official distributor",
+    "logo": "/images/brands/zkteco.png",
+    "description": "ZKTeco Biometrics & Access Control",
     "country": "Global"
   },
   {
@@ -94,17 +166,26 @@
     "name": "Western Digital",
     "slug": "western-digital",
     "productCount": 2,
-    "logo": "",
-    "description": "Western Digital official distributor",
-    "country": "Global"
+    "logo": "/images/brands/western-digital.svg",
+    "description": "WD Purple Video Surveillance Storage",
+    "country": "USA"
   },
   {
-    "id": "brand-ruijie",
-    "name": "Ruijie",
-    "slug": "ruijie",
+    "id": "brand-toshiba",
+    "name": "Toshiba",
+    "slug": "toshiba",
     "productCount": 1,
-    "logo": "",
-    "description": "Ruijie official distributor",
+    "logo": "/images/brands/toshiba.svg",
+    "description": "Toshiba Enterprise & Surveillance Storage",
+    "country": "Japan"
+  },
+  {
+    "id": "brand-beninca",
+    "name": "Beninca",
+    "slug": "beninca",
+    "productCount": 1,
+    "logo": "/images/brands/beninca.png",
+    "description": "Beninca Security Equipment",
     "country": "Global"
   }
 ]

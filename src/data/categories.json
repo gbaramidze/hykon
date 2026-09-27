@@ -6,7 +6,8 @@
     "level": 1,
     "icon": "Camera",
     "description": "IP ვიდეომეთვალყურეობის კამერები Uniview, Hikvision, HiLook, EZVIZ",
-    "productCount": 649
+    "productCount": 649,
+    "image": "/images/products/kamera-ip-hikvisionds-2cd1043g3-liu-1559c566.png"
   },
   {
     "id": "cat-analog-cameras",
@@ -15,7 +16,8 @@
     "level": 1,
     "icon": "Video",
     "description": "HD-TVI, CVI, AHD ვიდეოკამერები",
-    "productCount": 72
+    "productCount": 72,
+    "image": "/images/products/kamerahikvision-ds-2ce10kf3t-l-28mm-4362aaa5.png"
   },
   {
     "id": "cat-nvr",
@@ -24,7 +26,8 @@
     "level": 1,
     "icon": "Server",
     "description": "ქსელური NVR ჩამწერები 4-დან 128 არხამდე",
-    "productCount": 62
+    "productCount": 62,
+    "image": "/images/products/chamtseri-nvr-hikvision-ds-7608nxi--c12e7fe5.png"
   },
   {
     "id": "cat-dvr",
@@ -33,7 +36,8 @@
     "level": 1,
     "icon": "Cpu",
     "description": "ჰიბრიდული DVR და XVR ჩამწერები",
-    "productCount": 18
+    "productCount": 18,
+    "image": "/images/products/chamtseri-dvrhiwatchds-h208qac1sata-6327b09a.png"
   },
   {
     "id": "cat-alarms",
@@ -42,7 +46,8 @@
     "level": 1,
     "icon": "ShieldAlert",
     "description": "უსადენო და სადენიანი სიგნალიზაცია (Ajax, Paradox)",
-    "productCount": 143
+    "productCount": 143,
+    "image": "/images/products/deteqtori-modzraobis-ukabelo-ds-pdp-ceaf500c.png"
   },
   {
     "id": "cat-access-control",
@@ -51,7 +56,8 @@
     "level": 1,
     "icon": "KeyRound",
     "description": "IP დომოფონები, ბარათის წამკითხველები, საკეტები და ZKTeco",
-    "productCount": 107
+    "productCount": 107,
+    "image": "/images/products/domofoni-ds-kh6350-wte1-1d68f0bd.png"
   },
   {
     "id": "cat-storage",
@@ -60,7 +66,8 @@
     "level": 1,
     "icon": "HardDrive",
     "description": "Seagate SkyHawk, WD Purple და MicroSD ბარათები",
-    "productCount": 120
+    "productCount": 120,
+    "image": "/images/products/myari-diski-seagate-2tb-st2000vx003-b0c6d496.jpg"
   },
   {
     "id": "cat-switches",
@@ -69,7 +76,8 @@
     "level": 1,
     "icon": "Network",
     "description": "PoE კომუტატორები 4, 8, 16, 24 პორტით",
-    "productCount": 59
+    "productCount": 59,
+    "image": "/images/products/svichi-poe-hikvisionds-3e0510p-eb-8-0412c89c.jpg"
   },
   {
     "id": "cat-routers",
@@ -78,7 +86,8 @@
     "level": 1,
     "icon": "Wifi",
     "description": "Ruijie, Reyee, Ubiquiti, MikroTik როუტერები და Access Point-ები",
-    "productCount": 53
+    "productCount": 53,
+    "image": "/images/products/routeri-hikvision-ds-3wr15xwi-fi-6--40ac49d1.png"
   },
   {
     "id": "cat-power-cctv",
@@ -87,7 +96,8 @@
     "level": 1,
     "icon": "Zap",
     "description": "კვების წყაროები 12V/24V, PoE ინჟექტორები და UPS",
-    "productCount": 40
+    "productCount": 40,
+    "image": "/images/products/kvebis-bloki-220vac-12-vdc-10-a-120-c569715b.jpg"
   },
   {
     "id": "cat-brackets",
@@ -96,7 +106,8 @@
     "level": 1,
     "icon": "Wrench",
     "description": "კედლის და ჭერის სამაგრები, სამონტაჟო ყუთები (Junction Box)",
-    "productCount": 86
+    "productCount": 86,
+    "image": "/images/products/kameris-samagri-ds-1273zj-dm32-c188093e.png"
   },
   {
     "id": "cat-cables",
@@ -105,6 +116,7 @@
     "level": 1,
     "icon": "Cable",
     "description": "UTP/FTP Cat5e, Cat6 კაბელები, RJ45, BNC კონექტორები",
-    "productCount": 75
+    "productCount": 75,
+    "image": "/images/products/denis-kabeli-2x25-h05vv-f-outdoor-5ae4d2fd.png"
   }
 ]
