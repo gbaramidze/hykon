@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { headers } from "next/headers";
 import { StoreProvider } from "@/context/StoreContext";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -157,6 +158,19 @@ export default async function RootLayout({
   return (
     <html lang={initialLang} className="scroll-smooth">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PM42CL54XY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PM42CL54XY');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
